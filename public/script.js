@@ -15,20 +15,6 @@ const subject = document.body.dataset.subject || 'General';
 let notes = [];
 let currentEditIndex = null;
 
-// Load notes from local storage
-function loadNotesFromLocalStorage() {
-    const savedNotes = localStorage.getItem('notes');
-    if (savedNotes) {
-        notes = JSON.parse(savedNotes);
-        renderNotes();
-    }
-}
-
-// Save notes to local storage
-function saveNotesToLocalStorage() {
-    localStorage.setItem('notes', JSON.stringify(notes));
-}
-
 // Fetch notes from the server based on the current subject
 async function fetchNotes() {
     try {
@@ -37,11 +23,9 @@ async function fetchNotes() {
             throw new Error('Network response was not ok.');
         }
         notes = await response.json();
-        saveNotesToLocalStorage(); // Save fetched notes to local storage
         renderNotes();
     } catch (error) {
         console.error('Failed to fetch notes:', error);
-        renderNotes(); // Render notes from local storage if fetch fails
     }
 }
 
@@ -60,13 +44,9 @@ async function addNoteToServer(content, title = 'Untitled') {
         }
         const data = await response.json();
         notes.push({ id: data.id, content, title, subject });
-        saveNotesToLocalStorage(); // Save new note to local storage
         renderNotes();
     } catch (error) {
         console.error('Failed to add note:', error);
-        notes.push({ id: Date.now(), content, title, subject }); // Temporary ID
-        saveNotesToLocalStorage(); // Save new note to local storage
-        renderNotes();
     }
 }
 
@@ -83,11 +63,6 @@ async function updateNoteOnServer(id, content, title, subject) {
         if (!response.ok) {
             throw new Error('Network response was not ok.');
         }
-        const updatedNote = notes.find(n => n.id === id);
-        updatedNote.content = content;
-        updatedNote.title = title;
-        updatedNote.subject = subject;
-        saveNotesToLocalStorage(); // Save updated note to local storage
     } catch (error) {
         console.error('Failed to update note:', error);
     }
@@ -162,7 +137,6 @@ saveBtn.addEventListener('click', async () => {
 async function deleteNote(id) {
     await deleteNoteFromServer(id);
     notes = notes.filter(note => note.id !== id);
-    saveNotesToLocalStorage(); // Remove from local storage
     renderNotes();
 }
 
@@ -215,6 +189,5 @@ addNoteBtn.addEventListener('click', () => {
     }
 });
 
-// Initial load of notes
-loadNotesFromLocalStorage();
+// Initial fetch of notes
 fetchNotes();
