@@ -1,4 +1,4 @@
-const apiBaseUrl = 'https://marmalade-ordinary-earwig.glitch.me/';
+const apiBaseUrl = 'https://western-cream-plant.glitch.me/';
 const fileInput = document.getElementById('file-input');
 const notesContainer = document.getElementById('notes-container');
 const editModal = document.getElementById('edit-modal');
