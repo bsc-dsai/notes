@@ -87,7 +87,7 @@ async function updateNoteOnServer(id, content, title, newSubject) {
             const newNotes = notes.filter(note => note.subject === newSubject) || [];
             newNotes.push({ id, title, subject: newSubject, content });
             notes = [...notes, ...newNotes];
-            window.location.href = `/subjects/${newSubject.toLowerCase()}.html`; // Redirect to new subject page
+            window.location.href = `/${newSubject.toLowerCase()}.html`; // Redirect to new subject page
         } else {
             notes[noteIndex] = { ...notes[noteIndex], ...updatedNote };
             renderNotes();
