@@ -188,13 +188,14 @@ textarea {
 
 /* Preserve whitespace and line breaks */
 .note-content {
-    overflow-x: auto; /* Enable horizontal scroll */
-    white-space: nowrap; /* Prevent text from wrapping */
-    max-width: 100%; /* Ensure it doesn't overflow the container */
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
     padding: 10px;
-    border: 1px solid #444;
+    border-top: 1px solid #333;
+    border-radius: 0 0 8px 8px;
+    overflow: auto; /* Handle long content */
+    text-align: left; /* Ensure text is aligned to the left */
+    word-break: break-word; /* Break long words */
 }
-
 
 /* Footer styling */
 .footer {
@@ -243,7 +244,6 @@ textarea {
     padding: 10px 15px; /* Padding inside the card */
     position: relative; /* For absolute positioning of grey strip */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for card effect */
-    overflow-x: auto; /* Enable horizontal scrolling for long lines */
 }
 
 /* Grey Strip */
@@ -298,7 +298,9 @@ textarea {
     font-style: italic; /* Italicize placeholder text */
 }
 
-/* Prevent horizontal scrolling on body */
-body {
-    overflow-x: hidden; /* Prevent horizontal scrolling on body */
+#edit-subject:focus {
+    border-color: #009acd; /* Change border color on focus */
+    border-width: 2.5px; /* Slightly thicker border on focus */
+    outline: none; /* Remove default focus outline */
 }
+
