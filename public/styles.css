@@ -188,15 +188,13 @@ textarea {
 
 /* Preserve whitespace and line breaks */
 .note-content {
-    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+    overflow-x: auto; /* Enable horizontal scroll */
+    white-space: nowrap; /* Prevent text from wrapping */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
     padding: 10px;
-    border-top: 1px solid #333;
-    border-radius: 0 0 8px 8px;
-    overflow: auto; /* Handle long content */
-    text-align: left; /* Ensure text is aligned to the left */
-    word-break: break-word; /* Break long words */
-    overflow-x: auto; /* Enable horizontal scrolling */
+    border: 1px solid #444;
 }
+
 
 /* Footer styling */
 .footer {
