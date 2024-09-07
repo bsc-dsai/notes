@@ -188,13 +188,15 @@ textarea {
 
 /* Preserve whitespace and line breaks */
 .note-content {
-    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+    white-space: nowrap; /* Prevent wrapping of long lines */
+    overflow-x: auto; /* Enable horizontal scrolling */
     padding: 10px;
     border-top: 1px solid #333;
     border-radius: 0 0 8px 8px;
-    overflow: auto; /* Handle long content */
     text-align: left; /* Ensure text is aligned to the left */
     word-break: break-word; /* Break long words */
+    max-height: 200px; /* Set a max-height for the note content */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Footer styling */
@@ -215,12 +217,17 @@ textarea {
 }
 
 /* Hide scrollbar for Webkit browsers */
-.note-content {
-    overflow: auto; /* Ensure the content is scrollable */
+.note-content::-webkit-scrollbar {
+    height: 8px; /* Width of the horizontal scrollbar */
 }
 
-.note-content::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar */
+.note-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.note-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover */
 }
 
 /* Subject Buttons Container */
@@ -303,4 +310,3 @@ textarea {
     border-width: 2.5px; /* Slightly thicker border on focus */
     outline: none; /* Remove default focus outline */
 }
-
