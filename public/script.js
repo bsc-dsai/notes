@@ -1,4 +1,4 @@
-const apiBaseUrl = 'https://your-glitch-project.glitch.me'; // Replace with your Glitch URL
+const apiBaseUrl = 'https://marmalade-ordinary-earwig.glitch.me'; // Replace with your Glitch URL
 
 const fileInput = document.getElementById('file-input');
 const notesContainer = document.getElementById('notes-container');
