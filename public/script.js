@@ -1,5 +1,4 @@
-const apiBaseUrl = 'https://marmalade-ordinary-earwig.glitch.me/'; // Replace with your Glitch URL
-
+const apiBaseUrl = 'https://marmalade-ordinary-earwig.glitch.me/';
 const fileInput = document.getElementById('file-input');
 const notesContainer = document.getElementById('notes-container');
 const editModal = document.getElementById('edit-modal');
@@ -11,9 +10,23 @@ const saveBtn = document.getElementById('save-btn');
 const addNoteBtn = document.getElementById('add-note-btn');
 
 const subject = document.body.dataset.subject || 'General';
-
 let notes = [];
 let currentEditIndex = null;
+
+// LocalStorage keys
+const localNotesKey = `notes_${subject}`;
+
+// Check if local storage is supported
+function isLocalStorageSupported() {
+    try {
+        const test = 'test';
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
 
 // Fetch notes from the server based on the current subject
 async function fetchNotes() {
@@ -23,52 +36,75 @@ async function fetchNotes() {
             throw new Error('Network response was not ok.');
         }
         notes = await response.json();
+        saveNotesLocally(notes); // Save notes to local storage
         renderNotes();
     } catch (error) {
-        console.error('Failed to fetch notes:', error);
+        console.error('Failed to fetch notes from server, using local storage:', error);
+        notes = getNotesFromLocalStorage() || [];
+        renderNotes();
     }
 }
 
-// Add a new note to the server for the current subject
+// Save notes to both server and local storage
 async function addNoteToServer(content, title = 'Untitled') {
+    const newNote = { title, subject, content };
+
+    // Try to save to the server
     try {
         const response = await fetch(`${apiBaseUrl}/notes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ title, subject, content })
+            body: JSON.stringify(newNote)
         });
         if (!response.ok) {
             throw new Error('Network response was not ok.');
         }
         const data = await response.json();
-        notes.push({ id: data.id, content, title, subject });
+        newNote.id = data.id; // Assign the new ID from the server
+        notes.push(newNote);
+        saveNotesLocally(notes); // Update local storage with the new note
         renderNotes();
     } catch (error) {
-        console.error('Failed to add note:', error);
+        console.error('Failed to add note to server, saving locally:', error);
+        newNote.id = Date.now(); // Temporary ID for local notes
+        notes.push(newNote);
+        saveNotesLocally(notes);
+        renderNotes();
     }
 }
 
-// Update a note on the server
+// Update a note on the server and local storage
 async function updateNoteOnServer(id, content, title, subject) {
+    const updatedNote = { title, subject, content };
+
+    // Try to update on the server
     try {
         const response = await fetch(`${apiBaseUrl}/notes/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ title, subject, content })
+            body: JSON.stringify(updatedNote)
         });
         if (!response.ok) {
             throw new Error('Network response was not ok.');
         }
     } catch (error) {
-        console.error('Failed to update note:', error);
+        console.error('Failed to update note on server, updating locally:', error);
+    }
+    
+    // Update note locally
+    const noteIndex = notes.findIndex(note => note.id === id);
+    if (noteIndex > -1) {
+        notes[noteIndex] = { ...notes[noteIndex], ...updatedNote };
+        saveNotesLocally(notes);
+        renderNotes();
     }
 }
 
-// Delete a note from the server
+// Delete a note from the server and local storage
 async function deleteNoteFromServer(id) {
     try {
         const response = await fetch(`${apiBaseUrl}/notes/${id}`, {
@@ -78,13 +114,34 @@ async function deleteNoteFromServer(id) {
             throw new Error('Network response was not ok.');
         }
     } catch (error) {
-        console.error('Failed to delete note:', error);
+        console.error('Failed to delete note from server, deleting locally:', error);
     }
+
+    // Delete note locally
+    notes = notes.filter(note => note.id !== id);
+    saveNotesLocally(notes);
+    renderNotes();
 }
 
 // Add a new note (either from file upload or prompt)
 function addNote(content, title = 'Untitled') {
     addNoteToServer(content, title);
+}
+
+// Save notes to local storage
+function saveNotesLocally(notes) {
+    if (isLocalStorageSupported()) {
+        localStorage.setItem(localNotesKey, JSON.stringify(notes));
+    }
+}
+
+// Get notes from local storage
+function getNotesFromLocalStorage() {
+    if (isLocalStorageSupported()) {
+        const storedNotes = localStorage.getItem(localNotesKey);
+        return storedNotes ? JSON.parse(storedNotes) : [];
+    }
+    return [];
 }
 
 // Render notes to the DOM
@@ -128,7 +185,6 @@ saveBtn.addEventListener('click', async () => {
         note.title = editTitleInput.value;
         note.content = editNoteContent.value;
         await updateNoteOnServer(note.id, note.content, note.title, note.subject);
-        fetchNotes();  // Refresh notes list
         closeEditModal();
     }
 });
@@ -136,7 +192,6 @@ saveBtn.addEventListener('click', async () => {
 // Delete a note
 async function deleteNote(id) {
     await deleteNoteFromServer(id);
-    notes = notes.filter(note => note.id !== id);
     renderNotes();
 }
 
