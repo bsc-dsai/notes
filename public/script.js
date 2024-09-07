@@ -1,3 +1,5 @@
+const apiBaseUrl = 'https://your-glitch-project.glitch.me'; // Replace with your Glitch URL
+
 const fileInput = document.getElementById('file-input');
 const notesContainer = document.getElementById('notes-container');
 const editModal = document.getElementById('edit-modal');
@@ -16,7 +18,7 @@ let currentEditIndex = null;
 // Fetch notes from the server based on the current subject
 async function fetchNotes() {
     try {
-        const response = await fetch(`/notes?subject=${subject}`);
+        const response = await fetch(`${apiBaseUrl}/notes?subject=${subject}`);
         if (!response.ok) {
             throw new Error('Network response was not ok.');
         }
@@ -30,7 +32,7 @@ async function fetchNotes() {
 // Add a new note to the server for the current subject
 async function addNoteToServer(content, title = 'Untitled') {
     try {
-        const response = await fetch('/notes', {
+        const response = await fetch(`${apiBaseUrl}/notes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -51,7 +53,7 @@ async function addNoteToServer(content, title = 'Untitled') {
 // Update a note on the server
 async function updateNoteOnServer(id, content, title, subject) {
     try {
-        const response = await fetch(`/notes/${id}`, {
+        const response = await fetch(`${apiBaseUrl}/notes/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -69,7 +71,7 @@ async function updateNoteOnServer(id, content, title, subject) {
 // Delete a note from the server
 async function deleteNoteFromServer(id) {
     try {
-        const response = await fetch(`/notes/${id}`, {
+        const response = await fetch(`${apiBaseUrl}/notes/${id}`, {
             method: 'DELETE'
         });
         if (!response.ok) {
