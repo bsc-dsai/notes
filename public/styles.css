@@ -9,7 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling on the entire page */
 }
 
 /* Title Styling */
@@ -25,7 +24,7 @@ h1 {
     max-width: 1000px;
     margin: auto;
     text-align: center;
-    padding: 20px;
+    padding: 20px; /* Add padding to create space around the content */
 }
 
 /* Upload button */
@@ -58,8 +57,8 @@ h1 {
     border: 1px solid #333;
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
-    border-left: 5px solid #00bfff;
+    padding-left: 10px; /* Add padding to accommodate the blue strip */
+    border-left: 5px solid #00bfff; /* Blue strip on the left side */
 }
 
 /* Note header styling */
@@ -149,7 +148,7 @@ h1 {
     max-width: 600px;
     border-radius: 10px;
     position: relative;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
 }
 
 textarea {
@@ -187,17 +186,18 @@ textarea {
     background-color: #009acd;
 }
 
-/* Horizontal Scroll Feature */
+/* Preserve whitespace and line breaks */
 .note-content {
     white-space: pre-wrap; /* Preserve whitespace and line breaks */
-    overflow-x: auto; /* Allow horizontal scroll */
-    word-break: break-word; /* Break long words for better readability */
     padding: 10px;
     border-top: 1px solid #333;
     border-radius: 0 0 8px 8px;
-    max-width: 100%;
+    overflow: auto; /* Handle long content */
+    text-align: left; /* Ensure text is aligned to the left */
+    word-break: break-word; /* Break long words */
 }
 
+/* Footer styling */
 .footer {
     background-color: #333;
     color: #f5f5f5;
@@ -215,6 +215,92 @@ textarea {
 }
 
 /* Hide scrollbar for Webkit browsers */
+.note-content {
+    overflow: auto; /* Ensure the content is scrollable */
+}
+
 .note-content::-webkit-scrollbar {
     display: none; /* Hide the scrollbar */
 }
+
+/* Subject Buttons Container */
+.subject-buttons {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Space between cards */
+    margin-top: 20px;
+    max-width: 600px; /* Adjust to fit your layout */
+    margin: auto; /* Center align the container */
+}
+
+/* Subject Card Styling */
+.subject-card {
+    background-color: #2e2e2e; /* Dark background for card */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333; /* Border to define card edges */
+    padding: 10px 15px; /* Padding inside the card */
+    position: relative; /* For absolute positioning of grey strip */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for card effect */
+}
+
+/* Grey Strip */
+.subject-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px; /* Width of the grey strip */
+    background-color: #00bfff; /* Grey color for the strip */
+    border-radius: 8px 0 0 8px; /* Rounded corners on the left */
+}
+
+/* Subject Button Styling */
+.subject-card a {
+    color: #fff;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.1rem; /* Text size for better readability */
+    font-weight: bold; /* Bold text */
+    flex: 1; /* Allow text to take available space */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align text inside card */
+    height: 100%; /* Full height for consistent card size */
+}
+
+/* Hover and Active States */
+.subject-card:hover {
+    background-color: #3e3e3e; /* Slightly lighter background on hover */
+}
+
+.subject-card:active {
+    background-color: #333; /* Darker background on click */
+}
+
+/* Improved subject input field styling */
+#edit-subject {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    background-color: #1e1e1e; /* Dark theme background */
+    color: #fff; /* Light text for contrast */
+    border: 2px solid #00bfff; /* Bright blue border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.1rem; /* Larger font size for readability */
+    margin-bottom: 10px; /* Space below the input field */
+}
+
+#edit-subject::placeholder {
+    color: #bbb; /* Light grey color for placeholder */
+    font-style: italic; /* Italicize placeholder text */
+}
+
+#edit-subject:focus {
+    border-color: #009acd; /* Change border color on focus */
+    border-width: 2.5px; /* Slightly thicker border on focus */
+    outline: none; /* Remove default focus outline */
+}
+
