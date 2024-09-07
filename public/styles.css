@@ -195,6 +195,13 @@ textarea {
     overflow: auto; /* Handle long content */
     text-align: left; /* Ensure text is aligned to the left */
     word-break: break-word; /* Break long words */
+    max-height: 150px; /* Limit the height of the note content */
+    overflow-y: auto; /* Add vertical scroll if content exceeds height */
+}
+
+/* Hide scrollbar for Webkit browsers */
+.note-content::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
 }
 
 /* Footer styling */
@@ -212,15 +219,6 @@ textarea {
 
 .footer p {
     margin: 0;
-}
-
-/* Hide scrollbar for Webkit browsers */
-.note-content {
-    overflow: auto; /* Ensure the content is scrollable */
-}
-
-.note-content::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar */
 }
 
 /* Subject Buttons Container */
@@ -303,4 +301,3 @@ textarea {
     border-width: 2.5px; /* Slightly thicker border on focus */
     outline: none; /* Remove default focus outline */
 }
-
