@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    border-radius: 20px;
+    border: 0 0 10px rgba(0, 0, 0, 5);
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    margin-left: 246px;
+    overflow-y: auto;
+
+
+}
+
+.container1 {
+    border-radius: 20px;
+    border: 0 0 10px rgba(0, 0, 0, 5);
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    margin-left: 246px;
+    position: fixed;
+    overflow-y: auto;
+    padding-right: 741px;
+    border-top-left-radius: 0px;
+
+}
+
+.container2 {
+    border-radius: 20px;
+    border: 0 0 10px rgba(0, 0, 0, 5);
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    margin-left: 246px;
+    overflow-y: auto;
+    margin-top: 170px;
+}
+
+.container3 {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-left: 230px;
+    position: fixed;
+    overflow-y: auto;
+    padding-right: 1080px;
+    padding-top: 100px;
+    top: 0;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.math {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #555;
+}
+
+.venn-diagram {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.venn-diagram img {
+    width: 80%;
+    max-width: 600px;
+}
+
+.example {
+    background-color: #f1f1f1;
+    border-left: 5px solid #007BFF;
+    padding: 10px;
+    margin: 0px 0;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+/* Header Styling */
+header {
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Sidebar navigation styling */
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 20px;
+    bottom: -0;
+    overflow-y: auto;
+    border-radius: 20px;
+    border: 0 0 10px rgba(0, 0, 0, 5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #2980b9;
+}
+
+
+.week {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #007BFF;
+    border-radius: 20px;
+
+
+}
+
+.week-title {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.assessment {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}

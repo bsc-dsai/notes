@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Operations and Properties</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container3"></div>
+    <div class="container1">
+
+        <div class="header">
+            <header>
+                <div class="logo">
+                    <img src="https://i.postimg.cc/k5z6M5h7/logo-jpg.png" alt="Site Logo">
+                </div>
+                <nav>
+                    <a href="index.html">
+                        <h1>Home</h1>
+                    </a>
+                    <a href="#">
+                        <h1>result</h1>
+                    </a>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+
+    <!---->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="https://i.postimg.cc/k5z6M5h7/logo-jpg.png" alt="Site Logo">
+        </div>
+
+        <ul>
+            <li><a href="#Introduction to Probability">Introduction to Probability</a></li>
+            <li><a href="#Relative Frequency Definition of Probability">Relative Frequency Definition of Probability</a>
+            </li>
+            <li><a href="#Introduction to sample space, events">Sample Space</a></li>
+            <li><a href="#Categorizing Sample Spaces">Categorizing Sample Spaces</a></li>
+            <li><a href="#Set Operations and Properties">Set Operations and Properties</a></li>
+            <li><a href="#Axioms of probability">Axioms of probability</a></li>
+            <li><a href="#Complement Rule of Probability">Property: Complement Rule of Probability</a></li>
+            <li><a href="#Property: P(Φ) = 0">Property: P(Φ) = 0</a></li>
+            <li><a href="#Property: P(A ∪ B) for Non-Mutually Exclusive Sets">Property: P(A ∪ B) for Non-Mutually
+                    Exclusive Sets</a></li>
+            <li><a href="#Property: P(A) ≤ P(B) if A ⊆ B">Property: P(A) ≤ P(B) if A ⊆ B</a></li>
+
+
+        </ul>
+
+    </div>
+
+
+
+    <!--Introduction to Probability-->
+    
+    <div class="container2" id="Introduction to Probability" >
+        <h1>Introduction to Probability</h1>
+        <p>Probability theory deals with the study of random phenomena. Experiments are repeatable, and each time an
+            experiment is performed, you will get different outcomes. These outcomes often exhibit underlying patterns.
+        </p>
+        <p>An <strong>event</strong> is a subset of outcomes from an experiment. A <strong>random experiment</strong> is
+            one where the outcome cannot be predicted precisely. A single performance of the random experiment is called
+            a <strong>trial</strong>.</p>
+        <p>The classical definition of probability defines the probability of an event A as:</p>
+        <p><strong>P(A) = (Number of outcomes favorable to A) / (Total number of possible outcomes)</strong></p>
+        <p>This definition assumes that the outcomes are <strong>equally likely</strong>.</p>
+        <div class="math">
+            <h2>Examples</h2>
+            <h3>Example 1: Selecting a Black or Red Ball</h3>
+            <p>Consider a box containing 7 black balls and 3 red balls. The probability of selecting a black ball is:
+            </p>
+            <p><strong>P(Black) = 7/10</strong></p>
+            <p>The probability of selecting a red ball is:</p>
+            <p><strong>P(Red) = 3/10</strong></p>
+            <p>These probabilities add up to 1, as per the axioms of probability.</p>
+        </div>
+        <div class="math">
+            <h3>Example 2: Rolling a Fair Die</h3>
+            <p>Consider rolling a fair die. The die has six faces numbered 1 through 6. The probability of getting a 6
+                is:</p>
+            <p><strong>P(6) = 1/6</strong></p>
+        </div>
+    </div>
+
+    <!--Relative Frequency Definition of Probability-->
+    <div class="container" id="Relative Frequency Definition of Probability">
+        <h1>Relative Frequency Definition of Probability</h1>
+        <p>The next type of definition that I want to introduce to you is that of relative frequency with regards to the
+            probability measure. It states that the probability of the event A is defined as:</p>
+        <p><strong>P(A) = (Number of outcomes favorable to A) / (Total number of trials)</strong></p>
+        <p>Here, N is the total number of trials. You have to perform the experiment N number of times, but N is going
+            to be a very large number approaching infinity. With such a large number of trials, approaching infinity, we
+            are interested in the number of possible outcomes that are favorable to event A.</p>
+        <p>Based on that, you can define <strong>P(A)</strong>. One limitation in this definition is that you need to go
+            for a large number of trials approaching infinity, which may not be feasible for many applications.</p>
+        <p>Having introduced both the classical and relative frequency definitions of probability, we notice that they
+            work under limited circumstances. Next, we will start focusing on the axioms of probability, which we will
+            discuss in detail later.</p>
+        <h2>Example: Probability of Divisibility by a Prime Number</h2>
+        <p>To demonstrate the idea of the relative frequency definition of probability, consider the following example:
+        </p>
+        <p>The problem asks to determine the probability that a given number is divisible by a prime number.</p>
+        <p>Solution:</p>
+        <p>If you choose N integers, you know that the numbers that are divisible by a prime number, say p, will be
+            given by n/p. Let's take p = 5 as an example. If you consider numbers from 1 to 201, you know that 5, 10,
+            15, and so on up to 200 are divisible by 5.</p>
+        <p>How many such numbers exist? You can calculate it as:</p>
+        <p><strong>200/5 = 40</strong></p>
+        <p>So, there are 40 numbers divisible by 5 (5, 10, 15, ..., 200). This means there are
+            <strong>n/p</strong>favorable outcomes for the event that a given number is divisible by a prime number.
+        </p>
+        <p>In this case, we took p = 5, but in general, for a prime number p, there will be n/p possibilities. For a
+            large value of N, approaching infinity, the relative frequency definition can be applied:</p>
+        <p><strong>P(A) = lim n -> &#8734 (n/p) / n = 1/p</strong></p>
+        <p>In conclusion, the probability that a given number is divisible by a prime number p is <strong>1/p</strong>.
+        </p>
+    </div>
+
+    <!--Introduction to sample space, events-->
+    <div class="container" id="Introduction to sample space, events">
+        <h1>Sample Space Definition</h1>
+        <p>Having introduced the classical and relative frequency definitions of probability, we now move on to defining
+            what is called a <strong>sample space</strong>. This concept is crucial for our study in this course.</p>
+        <p>Consider an experiment where two coins are tossed simultaneously. The outcomes of this experiment can be
+            represented as follows:</p>
+        <div class="math">
+            <h3>Possible outcomes are:</h3>
+            <ul>
+                <li>Head,
+                <li>Head, Tail</li>
+                <li>Tail, Head</li>
+                <li>Tail, Tail</li>
+            </ul>
+            <p>In this case, there are four possible outcomes. These outcomes form a set, which is referred to as the
+                <strong>sample space</strong>.
+            </p>
+        </div>
+
+        <p>If we select the outcomes Head, Head; Head, Tail; and Tail, Head, we have a subset of the sample space. This
+            subset represents the event that at least one head has occurred:</p>
+        <div class="math">
+            <h4>Subset A: {Head, Head, Head, Tail, Tail, Head}</h4>
+            <h4>This event describes scenarios where at least one head appears among the outcomes.</h4>
+        </div>
+
+        <p>To summarize, a <strong>sample space</strong> is the collection of all possible outcomes of a random
+            experiment. Each individual outcome in the sample space is called a <strong>sample point</strong>. The
+            sample space can be categorized as:</p>
+        <div class="math">
+            <ul>
+                <li><strong>Finite</li>
+                <li><strong>Countably finite</li>
+                <li><strong>Uncountable</li>
+            </ul>
+        </div>
+        <p>Additionally, the sample space can be further classified into:</p>
+        <div class="math">
+            <ul>
+                <li><strong>Discrete Sample Space</li>
+                <li><strong>Continuous Sample Space</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Categorizing Sample Spaces-->
+    <div class="container" id="Categorizing Sample Spaces">
+        <h1>Categorizing Sample Spaces</h1>
+
+        <p>Let us now continue our discussion on how to categorize the sample spaces.</p>
+
+        <h2>1. Finite and Discrete Sample Space</h2>
+        <p>Consider the scenario where you toss a fair coin. The outcomes are <strong>head</strong> and
+            <strong>tail</strong>. These form the sample space, denoted as:
+        </p>
+        <div class="math">S = {Head, Tail}</div>
+        <p>The number of elements in this sample space is finite, and the outcomes are discrete.</p>
+
+        <p>Similarly, consider throwing a fair die. The sample space here is:</p>
+        <div class="math">S = {1, 2, 3, 4, 5, 6}</div>
+        <p>Again, this sample space is finite and discrete. If we define an event, such as getting an even number, the
+            event can be represented as:</p>
+        <div class="math">E = {2, 4, 6}</div>
+        <p>Events are represented as sets. Understanding set operations is crucial, which will be covered shortly.</p>
+
+        <h2>2. Countably Infinite Sample Space</h2>
+        <p>Now, consider an experiment where you toss a fair coin until you get a head. The outcomes here are:</p>
+        <div class="math">
+            S = {Head, Tail Head, Tail Tail Head, Tail Tail Tail Head, ...}
+        </div>
+        <p>In this case, the sample space is countably infinite. Although the outcomes are infinite, they can be
+            enumerated sequentially. The outcomes are discrete but infinite in number.</p>
+
+        <h2>3. Uncountably Infinite Sample Space</h2>
+        <p>Finally, consider the scenario where you randomly pick a real number between -1 and 1. The sample space is:
+        </p>
+        <div class="math">
+            S = {x | -1 ≤ x ≤ 1}
+        </div>
+        <p>The outcomes in this case are uncountably infinite. You can pick a point with any precision (e.g., 0.50,
+            0.52, 0.555, ...). Therefore, the sample space is continuous because the outcomes are not discrete and are
+            infinite in number.</p>
+    </div>
+
+
+    <!--Set Operations and Properties-->
+    <div class="container" id="Set Operations and Properties">
+        <h1>Set Operations and Properties</h1>
+
+        <p>So as I was mentioning to you, the elementary events, the sample space, they're all represented as sets. It's
+            very important that we give a quick review of the set operations that we'll possibly consider in this
+            course.</p>
+
+        <div class="venn-diagram">
+            <h2>1. Union and Intersection</h2>
+            <img src="https://news.efofex.com/wp-content/uploads/2016/02/gfbdbfba.png"
+                alt="Venn Diagram Union and Intersection">
+        </div>
+
+        <h2>2. Properties of Set Operations</h2>
+        <p>Here are some key properties:</p>
+        <div class="math">
+            <ul>
+                <li><strong>A ∪ A = A</strong>: The union of <strong>A</strong> with itself is <strong>A</strong>
+                    itself.</li>
+                <li><strong>A ∩ A = A</strong>: The intersection of <strong>A</strong> with itself is
+                    <strong>A</strong>.
+                </li>
+                <li><strong>A ∪ S = S</strong>: The union of <strong>A</strong> with the sample space <strong>S</strong>
+                    is <strong>S</strong>.</li>
+                <li><strong>A ∩ S = A</strong>: The intersection of <strong>A</strong> with the sample space
+                    <strong>S</strong> is <strong>A</strong>.
+                </li>
+                <li><strong>A ∪ ∅ = A</strong>: The union of <strong>A</strong> with the empty set <strong>∅</strong> is
+                    <strong>A</strong>.
+                </li>
+                <li><strong>A ∩ ∅ = ∅</strong>: The intersection of <strong>A</strong> with the empty set
+                    <strong>∅</strong> is <strong>∅</strong>.
+                </li>
+                <li><strong>A ∪ B = B ∪ A</strong>: Union is commutative.</li>
+                <li><strong>A ∩ B = B ∩ A</strong>: Intersection is commutative.</li>
+                <li><strong>(B ∪ C) ∪ A = (A ∪ B) ∪ C</strong>: Union is associative.</li>
+                <li><strong>(B ∩ C) ∩ A = (A ∩ B) ∩ C</strong>: Intersection is associative.</li>
+            </ul>
+        </div>
+
+        <h2>3. Distributive Properties</h2>
+        <p>The distributive properties are:</p>
+        <div class="math">
+            <ul>
+                <li><strong>B ∩ (C ∪ A) = (B ∩ C) ∪ (B ∩ A)</strong></li>
+                <li><strong>B ∪ (C ∩ A) = (B ∪ C) ∩ (B ∪ A)</strong></li>
+            </ul>
+        </div>
+
+        <h2>4. Complementary Properties</h2>
+        <p>Complementary properties include:</p>
+        <div class="math">
+            <ul>
+                <li><strong>A ∪ A' = S</strong>: The union of <strong>A</strong> and its complement <strong>A'</strong>
+                    is the sample space <strong>S</strong>.</li>
+                <li><strong>A ∩ A' = ∅</strong>: The intersection of <strong>A</strong> and its complement
+                    <strong>A'</strong> is the empty set <strong>∅</strong>.
+                </li>
+            </ul>
+        </div>
+
+
+        <h2>5. De Morgan's Laws</h2>
+        <p>De Morgan's Laws state:</p>
+        <div class="math">
+            <ul>
+                <li><strong>(A ∩ B)̅ = A' ∪ B̅</strong>: The complement of the intersection is the union of the
+                    complements.</li>
+                <li><strong>(A ∪ B)̅ = A' ∩ B̅</strong>: The complement of the union is the intersection of the
+                    complements.</li>
+            </ul>
+        </div>
+
+        <div class="math">
+            <div class="venn-diagram">
+                <img src="https://www.onlinemathlearning.com/image-files/de-morgans-theorem.png"
+                    alt="Venn Diagram De Morgan's Laws">
+            </div>
+            <p>The Venn diagram shows an example of De Morgan's Law. If you take <strong>A ∪ B</strong> and then
+                complement it, you get the same region as <strong>A' ∩ B̅</strong>. Similarly, taking the complement of
+                <strong>A ∩ B</strong> gives the same result as <strong>A' ∪ B̅</strong>.
+            </p>
+        </div>
+
+        <p>In summary, we reviewed the basic set operations—union, intersection, and complement—along with their
+            properties, identity properties, commutative properties, associative properties, distributive properties,
+            and complementary properties. We also introduced De Morgan's laws.</p>
+    </div>
+
+    <!--Mutually Exclusive Sets-->
+
+    <div class="container" id="Mutually Exclusive Sets">
+        <h1>Mutually Exclusive Sets and Partitioning</h1>
+        <h2>1. Mutually Exclusive Sets</h2>
+        <p>So now, moving on, this is a very important concept that we will keep on using in our study. We call two sets
+            <strong>mutually exclusive</strong> when their intersection is <strong>∅</strong>, which is the empty set.
+            For example, if you have two sets <strong>A</strong> and <strong>B</strong>, and they don't overlap in their
+            elements, then they are mutually exclusive. In a Venn diagram, this means that the two sets do not overlap.
+        </p>
+
+        <div class="venn-diagram">
+
+            <img src="https://images.gregmat.com/media/classes/classImages/Slide5_JYeXTrr.PNG"
+                alt="Venn Diagram Mutually Exclusive Sets">
+        </div>
+        <h2>2. Example of Mutually Exclusive Sets</h2>
+        <div class="math">
+            <p>Consider the sets <strong>A</strong> and <strong>B</strong> where:</p>
+
+            <p><strong>A</strong> is the set of even numbers: {2, 4, 6, 8, ...}</li>
+            <p><strong>B</strong> is the set of odd numbers: {1, 3, 5, 7, ...}</li>
+
+            <p>The union of <strong>A</strong> and <strong>B</strong> is all positive integers: {1, 2, 3, 4, 5, 6, 7, 8,
+                ...}</p>
+            <p>The intersection of <strong>A</strong> and <strong>B</strong> is empty: <strong>A ∩ B = ∅</strong>.
+                Hence, <strong>A</strong> and <strong>B</strong> are mutually exclusive.</p>
+        </div>
+
+
+        <h2>3. Partitioning a Sample Space</h2>
+        <p>Moving on to how to partition a sample space. A <strong>partition</strong> of the sample space is a
+            collection of mutually exclusive subsets such that their union is the entire sample space.</p>
+
+        <div class="venn-diagram">
+
+            <img src="https://www.researchgate.net/profile/David-Scott-57/publication/343672904/figure/fig4/AS:928880579842051@1598473796820/L-Venn-diagram-of-partition-of-O-into-m-6-sets-A-1-A-2-A-6-M-Set-B.png"
+                alt="Venn Diagram Partitioning">
+        </div>
+        <div class="example">
+            <h2>4. Example of Partitioning</h2>
+            <div class="math">
+                <p>Consider a sample space <strong>S</strong> partitioned into <strong>N</strong> subsets: <strong>A₁,
+                        A₂,
+                        A₃, ..., Aₙ</strong>. These subsets are pairwise mutually exclusive, meaning:</p>
+
+                <p><strong>Aᵢ ∩ Aⱼ = ∅</strong> for any <strong>i ≠ j</strong></p>
+                <p><strong>A₁ ∩ A₂ = ∅</strong> for <strong>i =1, j = 2</strong></p>
+
+                <p>Also, their union is the entire sample space:</p>
+                <p><strong>A₁ ∪ A₂ ∪ A₃ ∪ ... ∪ Aₙ = S</strong></p>
+                <p>This means the sample space has been partitioned into <strong>N</strong> mutually exclusive subsets.
+                </p>
+            </div>
+        </div>
+
+
+
+        <p>To summarize:</p>
+        <div class="math">
+            <ul>
+                <li><strong>Mutually exclusive sets</strong> have an empty intersection: <strong>A ∩ B = ∅</strong>.
+                </li>
+                <li><strong>Partitioning</strong> involves dividing the sample space into mutually exclusive subsets
+                    whose union covers the entire sample space.</li>
+            </ul>
+        </div>
+
+
+        <p>This concept of partitioning will be useful later when discussing events, total probability, and Bayes'
+            theorem.</p>
+    </div>
+
+
+    <!--Axioms of probability-->
+    <div class="container" id="Axioms of probability">
+        <h1>Axioms of probability</h1>
+
+        <p>We discussed two definitions of probability: the classical definition and the relative frequency definition.
+            We also categorized sample spaces into discrete and continuous types. Under discrete sample spaces, we have
+            finite and countably infinite spaces. Continuous sample spaces contain uncountable and infinite outcomes.
+        </p>
+
+        <p>We previously covered set operations such as union, intersection, and complement. We also discussed mutually
+            exclusive events and how to partition a sample space into mutually exclusive subsets. Now, we'll focus on
+            the foundational rules, or axioms, of probability.</p>
+
+        <h2>1. Probability Axioms</h2>
+        <p>Probability is associated with an event <strong>A</strong>. It is a number that satisfies certain axioms. The
+            probability measure <strong>P(A)</strong> should satisfy the following three conditions:</p>
+
+        <div class="math">
+            <ul>
+                <li>1. <strong>P(A) ≥ 0</strong>: The probability of any event <strong>A</strong> must be a non-negative
+                    number.</li>
+                <li>2. <strong>P(S) = 1</strong>: The probability of the entire sample space <strong>S</strong> is 1.
+                </li>
+                <li>3. For mutually exclusive events <strong>A</strong> and <strong>B</strong>, <strong>P(A ∪ B) = P(A)
+                        + P(B)</strong> if <strong>A ∩ B = ∅</strong>.</li>
+            </ul>
+        </div>
+
+
+        <h2>2. Example of Mutually Exclusive Events</h2>
+
+        <div class="venn-diagram">
+            <img src="https://images.nagwa.com/figures/explainers/673195212068/1.svg"
+                alt="Venn Diagram Mutually Exclusive Events">
+        </div>
+        <p>If <strong>A</strong> and <strong>B</strong> are mutually exclusive, meaning <strong>A ∩ B = ∅</strong>, the
+            probability of <strong>A ∪ B</strong> is:</p>
+        <div class="math">
+            <strong>P(A ∪ B) = P(A) + P(B)</strong>
+        </div>
+        <p>In this case, the two events do not overlap, so their intersection is empty.</p>
+
+        <h2>3. Summary of Probability Axioms</h2>
+        <p>To summarize:</p>
+        <div class="math">
+            <ul>
+                <li><strong>Probability must be non-negative:</strong> <strong>P(A) ≥ 0</strong>.</li>
+                <li><strong>The probability of the sample space:</strong> <strong>P(S) = 1</strong>.</li>
+                <li><strong>For mutually exclusive events:</strong> <strong>P(A ∪ B) = P(A) + P(B)</strong> when
+                    <strong>A ∩ B = ∅</strong>.
+                </li>
+            </ul>
+        </div>
+
+        <p>These axioms are crucial for understanding and working with probability. They form the foundation of
+            probability theory and are used in various applications, including deriving rules for probability,
+            conditioning events, and more.</p>
+    </div>
+
+    <!--Complement Rule of Probability-->
+    <div class="container" id="Complement Rule of Probability">
+        <h1>Complement Rule of Probability</h1>
+
+        <p>Let's derive the complement rule for probability, which states that the probability of the complement of an
+            event
+            <strong>A'</strong> is given by <strong>P(A') = 1 - P(A)</strong>. Consider a set <strong>A</strong> in a
+            Venn diagram representing event <strong>A</strong>.
+            We know that <strong>A</strong> and its complement <strong>A'</strong> together cover the entire sample
+            space <strong>S</strong>. This is a key identity
+            in probability theory.
+        </p>
+
+        <h2>1. Set Identity</h2>
+        <p>The union of <strong>A</strong> and <strong>A'</strong> is equal to the entire sample space, i.e.,
+            <strong>A ∪ A' = S</strong>. The probability of the entire sample space is:
+        </p>
+
+        <div class="math">
+
+            <strong>P(S) or P(Ω) = 1</strong>
+        </div>
+
+        <h2>2. Mutually Exclusive Events</h2>
+        <p>It's important to note that <strong>A</strong> and <strong>A'</strong> are mutually exclusive, meaning they
+            do not share any common elements,
+            i.e., <strong>A ∩ A' = ∅</strong>. This follows from Axiom 2, which states that mutually exclusive events
+            have a probability of:</p>
+
+        <div class="math">
+            <strong>A ∩ A' = ∅</strong> <br>
+            <strong>P(A ∪ A') = P(A) + P(A')</strong>
+        </div>
+
+        <p>Since <strong>A ∪ A' = S</strong>, we can substitute <strong>P(S) = 1</strong> into the equation:</p>
+
+        <div class="math">
+            <strong>1 = P(A) + P(A')</strong>
+        </div>
+
+        <h2>3. Deriving the Complement Rule</h2>
+        <p>By rearranging the above equation, we get the complement rule:</p>
+
+        <div class="math">
+            <strong>P(A') = 1 - P(A)</strong>
+        </div>
+
+        <div class="example">
+            <h2>4. Example</h2>
+            <p>Let's take an example where <strong>P(A) = 0.6</strong>. Then, using the complement rule, we can
+                calculate:
+            </p>
+
+            <div class="math">
+                <strong>P(A') = 1 - 0.6 = 0.4</strong>
+            </div>
+
+            <p>If two events are equally likely, such that <strong>P(A) = 0.5</strong>, then the probability of the
+                complement is also <strong>P(A') = 0.5</strong>.</p>
+        </div>
+
+    </div>
+
+
+    <!--Property: P(Φ) = 0-->
+    <div class="container" id="Property: P(Φ) = 0">
+        <h1>Property: P(Φ) = 0</h1>
+
+        <p>The next property we will derive is that the probability of the empty set, <strong>P(Φ)</strong>, is equal to
+            0. We have already discussed this before,
+            but let's approach it from a different angle.</p>
+
+        <h2>1. Mutually Exclusive Events Involving Φ</h2>
+        <p>Consider a set <strong>A</strong>. The intersection of <strong>A</strong> and the empty set
+            <strong>Φ</strong> is:
+        </p>
+
+        <div class="math">
+            <strong>A ∩ Φ = Φ</strong>
+        </div>
+
+        <p>This indicates that <strong>A</strong> and <strong>Φ</strong> are mutually exclusive events. Therefore, by
+            Axiom 3, we can express the probability of
+            their union as:</p>
+
+        <div class="math">
+            <strong>P(A ∪ Φ) = P(A) + P(Φ)</strong>
+        </div>
+
+        <h2>2. Using the Union of A and Φ</h2>
+        <p>Since <strong>A ∪ Φ = A</strong>, we know that:</p>
+
+        <div class="math">
+            <strong>P(A ∪ Φ) = P(A)</strong>
+        </div>
+
+        <p>Substituting this into the earlier equation, we get:</p>
+
+        <div class="math">
+            <strong>P(A) = P(A) + P(Φ)</strong>
+        </div>
+
+        <p>From this, we can conclude that:</p>
+
+        <div class="math">
+            <strong>P(Φ) = 0</strong>
+        </div>
+
+        <h2>3. Understanding the Empty Set</h2>
+        <p>This result makes sense because the empty set contains no elements, meaning there are zero possible outcomes.
+            Therefore, the probability of <strong>Φ</strong> must be 0.</p>
+
+        <h2>4. Recap of Properties</h2>
+        <p>We have now derived two key properties from the axioms of probability:</p>
+        <div class="math">
+            <ul>
+                <li>The complement rule: <strong>P(A') = 1 - P(A)</strong>.</li>
+                <li>The probability of the empty set: <strong>P(Φ) = 0</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Property: P(A ∪ B) for Non-Mutually Exclusive Sets-->
+    <div class="container" id="Property: P(A ∪ B) for Non-Mutually Exclusive Sets">
+        <h1>Property: P(A ∪ B) for Non-Mutually Exclusive Sets</h1>
+
+        <p>Now, I would like to discuss the next property, which relates to the case when sets <strong>A</strong> and
+            <strong>B</strong>
+            are not mutually exclusive. We already know what <strong>A ∪ B</strong> is for mutually exclusive sets, as
+            stated in Axiom 3. The condition for that was when <strong>A ∩ B = Φ</strong>, the probability of <strong>A
+                ∪
+                B</strong> is simply
+            <strong>P(A) + P(B)</strong>. But what happens when <strong>A ∩ B ≠ Φ</strong>?
+        </p>
+
+        <p>This is the case when <strong>A</strong> and <strong>B</strong> overlap, meaning there is an intersection
+            between
+            them,
+            which we denote as <strong>A ∩ B</strong>. The question is, how do we derive the expression for <strong>P(A
+                ∪
+                B)</strong>
+            when <strong>A</strong> and <strong>B</strong> are not mutually exclusive?</p>
+
+        <p>To do this, let's introduce a shorthand notation to make the representation easier to follow.
+            I will use <strong>A' ∩ B</strong> as a shorthand notation for the complement of <strong>A</strong>
+            intersecting
+            with <strong>B</strong>.</p>
+
+        <h2>1. Expression for <strong>P(A ∪ B)</strong></h2>
+        <p>We can now express <strong>A ∪ B</strong> as <strong>A ∪ (A' ∩ B)</strong>. This means the union of
+            <strong>A</strong> and
+            the complement of <strong>A</strong> intersecting with <strong>B</strong>. Visually, this covers the entire
+            region of
+            <strong>A ∪ B</strong>.
+        </p>
+
+        <p>Now, let's examine the two regions. The first region is <strong>A</strong>, and the second region is
+            <strong>A' ∩ B</strong>. These two regions are mutually exclusive, meaning their intersection is
+            <strong>Φ</strong>.
+        </p>
+
+        <p>Using Axiom 3, we can write:</p>
+
+        <div class="math">
+            <strong>P(A ∪ B) = P(A) + P(A' ∩ B)</strong>
+        </div>
+
+        <h2>2. Further Breakdown</h2>
+        <p>Next, we need to break down the expression further. We know that <strong>A' ∩ B</strong> refers to
+            the complement of <strong>A</strong> intersecting with <strong>B</strong>. Let's now consider the event
+            <strong>B</strong>.
+        </p>
+
+        <p>From the identity property, we know that:</p>
+
+        <div class="math">
+            <strong>B ∩ S = B</strong> (where <strong>S</strong> is the sample space)
+        </div>
+
+        <p>Also, we can express the sample space as <strong>A ∪ A'</strong>. Therefore, we can write:</p>
+
+        <div class="math">
+            <strong>B ∩ (A ∪ A') = (B ∩ A) ∪ (B ∩ A') = B</strong>
+        </div>
+
+        <h2>3. Applying Distributive Property</h2>
+        <p>Now, let's visualize this on a Venn diagram. The region <strong>B ∩ A</strong> is the overlapping part of
+            <strong>A</strong> and <strong>B</strong>, while <strong>B ∩ A'</strong> is the part of <strong>B</strong>
+            that is outside <strong>A</strong>.
+        </p>
+
+        <p>These two regions, <strong>B ∩ A</strong> and <strong>B ∩ A'</strong>, are mutually exclusive, so we can
+            write,
+            using Axiom 3:</p>
+
+        <div class="math">
+            <strong>P(B) = P(B ∩ A) + P(B ∩ A')</strong>
+        </div>
+
+        <p>We know that <strong>B ∩ A'</strong> is the same as <strong>A' ∩ B</strong>. Therefore, we can express
+            <strong>P(A' ∩ B)</strong> as:
+        </p>
+
+        <div class="math">
+            <strong>P(A' ∩ B) = P(B) - P(A ∩ B)</strong>
+        </div>
+
+        <h2>4. Final Expression</h2>
+        <p>Now, substituting this back into our original expression for <strong>P(A ∪ B)</strong>, we get:</p>
+
+        <div class="math">
+            <strong>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</strong>
+        </div>
+
+        <p>This gives us the expression for the probability of the union of two events that are not mutually exclusive.
+        </p>
+    </div>
+
+
+
+    <!--Property: P(A) ≤ P(B) if A ⊆ B-->
+    <div class="container" id="Property: P(A) ≤ P(B) if A ⊆ B">
+        <h1>Property: P(A) ≤ P(B) if A ⊆ B</h1>
+
+        <p>We have considered the scenario when <strong>A</strong> and <strong>B</strong> are not mutually exclusive
+            events. We showed that
+            <strong>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</strong>. Now, we will move on to the last property of probability
+            that we can derive from
+            the axioms.
+        </p>
+
+        <p>This property states that if you have an event <strong>A</strong> where the elements of <strong>A</strong>
+            are contained within <strong>B</strong>, or
+            <strong>A</strong> is a subset of <strong>B</strong>, then we can show that:
+        </p>
+
+        <div class="math">
+            <strong>P(A) ≤ P(B)</strong>
+        </div>
+        <div class="example">
+            <p>For example, consider a fair die. The sample space <strong>Ω</strong> is <strong>{1, 2, 3, 4, 5,
+                    6}</strong>.
+                Let <strong>A</strong> be the event of
+                getting a {2}, and let <strong>B</strong> be the event of getting an even number <strong>{2, 4,
+                    6}</strong>.
+                Here, <strong>A</strong> is clearly a subset of <strong>B</strong>,
+                so we can say that <strong>P(A) ≤ P(B)</strong>.</p>
+
+            <p>For <strong>A = {2}</strong>, <strong>P(A) = 1/6</strong>, and for <strong>B = {2, 4, 6}</strong>,
+                <strong>P(B) = 3/6</strong>. Clearly, <strong>1/6 &lt; 3/6</strong>.
+            </p>
+        </div>
+        <h2>1. Proof from Axioms</h2>
+        <p>We will now prove this from the axioms of probability. Suppose <strong>A</strong> is contained within
+            <strong>B</strong>. Then:
+        </p>
+
+        <div class="math">
+            <strong>A ∪ A' ∩ B = B</strong>
+        </div>
+
+        <p>Where <strong>A'B</strong> denotes the region of <strong>B</strong> that does not include <strong>A</strong>
+            (i.e., <strong>A' ∩ B</strong>). The union of <strong>A</strong> and
+            <strong>A' ∩ B</strong> gives <strong>B</strong>. Also, note that <strong>A</strong> and
+            <strong>A'B</strong>
+            are mutually exclusive, meaning:
+        </p>
+
+        <div class="math">
+            <strong>A ∩ A' ∩ B = Φ</strong>
+        </div>
+
+        <h2>2. Invoking Axiom 3</h2>
+        <p>Since <strong>A</strong> and <strong>A' ∩ B</strong> are mutually exclusive, we can apply Axiom 3 to write:
+        </p>
+
+        <div class="math">
+            <strong>P(B) = P(A) + P(A' ∩ B)</strong>
+        </div>
+
+        <p>Since <strong>P(A' ∩ B) ≥ 0</strong>, it follows that <strong>P(B) ≥ P(A)</strong>. This proves that if
+            <strong>A ⊆ B</strong>, then:
+        </p>
+
+        <div class="math">
+            <strong>P(A) ≤ P(B)</strong>
+        </div>
+
+        <h2>3. Recap</h2>
+        <p>We have derived this important property of probability, which states that if <strong>A</strong> is a subset
+            of <strong>B</strong>, then the probability of
+            <strong>A</strong> is less than or equal to the probability of <strong>B</strong>. Remember the three axioms
+            of probability as we conclude:
+        </p>
+        <div class="math">
+            <ul>
+                <li><strong>P(A) ≥ 0</strong> (Non-negative)</li>
+                <li><strong>P(Ω) = 1</strong> (Probability of the sample space is 1)</li>
+                <li>If <strong>A</strong> and <strong>B</strong> are mutually exclusive, then <strong>P(A ∪ B) = P(A) +
+                        P(B)</strong></li>
+            </ul>
+        </div>
+        <p>These axioms are fundamental in deriving all properties of probability.</p>
+        <p>Thank you.</p>
+    </div>
+
+
+    <!--Review of Probability Axioms-->
+    <div class="container" id="Review of Probability Axioms">
+        <h1>Review of Probability Axioms</h1>
+
+        <p>Welcome back. Let's review the axioms of probability once again. For any event <strong>A</strong>, we can
+            assign a number called
+            the probability of the event. This number, called the probability measure, must satisfy the following three
+            conditions:</p>
+
+        <ul>
+            <li>The number must be non-negative, meaning it must be greater than or equal to 0.</li>
+            <li>The probability of the whole set, defined as the sample space, must be 1.</li>
+
+        </ul>
+        <div class="math">
+            If <strong>A</strong> and <strong>B</strong> are two mutually exclusive events (i.e., <strong>A ∩ B =
+                Φ</strong>), then the probability of
+            <strong>A ∪ B</strong> will be <strong>P(A ∪ B) = P(A) + P(B)</strong>.
+        </div>
+
+        <p>Based on these axioms, we previously derived several important rules pertaining to probability.</p>
+
+        <h2>1. Probability of the Complement</h2>
+        <p>The probability of the complement of event <strong>A</strong> is given by:</p>
+
+        <div class="math">
+            <strong>P(A') = 1 - P(A)</strong>
+        </div>
+
+        <h2>2. Non-Mutually Exclusive Events</h2>
+        <p>For events <strong>A</strong> and <strong>B</strong> that are not mutually exclusive (i.e., <strong>A ∩ B ≠
+                Φ</strong>), we have the following rule:</p>
+
+        <div class="math">
+            <strong>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</strong>
+        </div>
+
+        <h2>3. Sample Space Overview</h2>
+        <p>We also discussed the concept of a sample space, which can be:</p>
+        <div class="math">
+            <ul>
+                <li>Discrete finite</li>
+                <li>Discrete infinite</li>
+                <li>Continuous</li>
+            </ul>
+        </div>
+        <h2>4. Examples</h2>
+        <p>In this part, I will now work through a few examples to illustrate the concepts we've discussed so far. I
+            will take up
+            two examples to demonstrate these ideas.</p>
+    </div>
+
+
+</body>
+
+</html>
