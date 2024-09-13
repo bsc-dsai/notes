@@ -1,0 +1,24 @@
+Lexical elements
+    basic buliding blocks of a c program
+    a c program can be mad of 6 building blocks
+
+tokens basic building blocks of the language
+    they are the smallest unit of a c programs that has meaning
+
+compilation process
+    compiler will groups character of source code into tokens
+    source code----->tokens----->object code 
+    then translate tokens into object code
+    keyword identifier 
+    int main(void){}
+    
+tokens
+    syntactic units of the language
+    six kind of tokens
+        keyword
+        punctuators
+        identifiers
+        constants
+        string constants
+        operator
+        

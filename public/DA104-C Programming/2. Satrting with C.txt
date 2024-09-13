@@ -1,0 +1,13 @@
+### Starting with C
+
+- **History**: **Dennis Ritchie** developed **C** based on **BCPL** and **B** to create **UNIX**. C became popular due to its portability.
+
+
+#### First Program in C
+
+```c
+#include <stdio.h>
+int main(void) {
+    printf("Hello World\n");
+    return 0;
+}

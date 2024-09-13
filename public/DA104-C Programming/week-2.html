@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Operations and Properties</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header" id="head">
+            <header>
+                <!--<div class="logo">
+                    <img src="https://i.postimg.cc/k5z6M5h7/logo-jpg.png" alt="Site Logo">
+                </div> -->
+                <nav>
+                    <a href="home.html">
+                        <h1>Home</h1>
+                    </a>
+                    <a href="../index.html">
+                        <h1>Subject</h1>
+                    </a>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+
+    <!---->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="https://i.postimg.cc/k5z6M5h7/logo-jpg.png" alt="Site Logo">
+        </div>
+
+        <ul>
+            <!--
+            <li><a href="#Introduction to Probability">Introduction to Probability</a></li>
+            <li><a href="#Relative Frequency Definition of Probability">Relative Frequency Definition of Probability</a>
+            </li>
+            <li><a href="#Introduction to sample space, events">Sample Space</a></li>
+            <li><a href="#Categorizing Sample Spaces">Categorizing Sample Spaces</a></li>
+            <li><a href="#Set Operations and Properties">Set Operations and Properties</a></li>
+            <li><a href="#Axioms of probability">Axioms of probability</a></li>
+            <li><a href="#Complement Rule of Probability">Property: Complement Rule of Probability</a></li>
+            <li><a href="#Property: P(Φ) = 0">Property: P(Φ) = 0</a></li>
+            <li><a href="#Property: P(A ∪ B) for Non-Mutually Exclusive Sets">Property: P(A ∪ B) for Non-Mutually
+                    Exclusive Sets</a></li>
+            <li><a href="#Property: P(A) ≤ P(B) if A ⊆ B">Property: P(A) ≤ P(B) if A ⊆ B</a></li>
+            -->
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- Lexical Elements in C Programming -->
+    <div class="container" id="C Programming Lexical Elements">
+        <h1>Week 2: Lexical Elements in C Programming</h1>
+
+        <p>In the first Week, we learned how to write a basic C program and the structure of a basic C program. We are
+            now ready for our second Week, which is on <strong>lexical elements</strong>. What are lexical elements?
+            By lexical elements, we mean the basic building blocks of a C program.</p>
+
+        <p>Lexical elements are the <strong>basic building blocks</strong> of a C program or, for that matter, any
+            programming language. A C program can be thought of as made up of six types of building blocks. These
+            building blocks in C are called <strong>tokens</strong>. In this Week, we will be understanding all six
+            building blocks. Tokens are the basic building blocks of the language. They are also the <strong>smallest
+                units of a C program that have meaning</strong>.</p>
+
+        <h2>Lexical Analysis and Compilation Process</h2>
+        <p>During the compilation process, the compiler breaks the C source code into tokens through a process called
+            <strong>lexical analysis</strong>. Now, let's look at the compilation process. How does the compiler compile
+            a program?
+        </p>
+
+        <p>We have the <strong>source code</strong>. What is the source code? The source code can be thought of as a
+            sequence of characters, such as <code>int</code>, <code>main</code>, <code>void</code>, etc. These
+            characters are grouped into tokens by the compiler. For example, in a C program:</p>
+
+        <pre><code>int main() { 
+        // Your code here
+    }</code></pre>
+        <div class="math">
+            <div class="venn-diagram">
+                <img src="images/flow.png" alt="">
+            </div>
+        </div>
+
+
+        <p>This is a sequence of characters. The compiler will group these characters into tokens:</p>
+
+        <ul>
+            <li><code>int</code> - This is one token (a keyword).</li>
+            <li><code>main</code> - This is one token (an identifier).</li>
+            <li><code>()</code> - These are tokens (punctuators).</li>
+            <li><code>{}</code> - These are tokens (operators).</li>
+        </ul>
+
+        <p>The compiler groups these characters into tokens, which are the basic vocabulary of the language. It then
+            translates these tokens into object codes. For example:</p>
+
+        <ul>
+            <li><code>int</code> is a <strong>keyword</strong> (a token).</li>
+            <li><code>main</code> is an <strong>identifier</strong> (a token).</li>
+            <li><code>()</code> are <strong>operators</strong> (tokens).</li>
+            <li><code>{}</code> are <strong>punctuators</strong> (tokens).</li>
+        </ul>
+
+        <p>In summary, a C program can be thought of as a sequence of characters, and the compiler groups them into
+            tokens. Each of these tokens is translated into codes.</p>
+
+        <h2>Types of Tokens in C</h2>
+        <p>In C, there are <strong>six types of tokens</strong>:</p>
+
+        <ul>
+            <li><strong>Keywords</strong></li>
+            <li><strong>Punctuators</strong></li>
+            <li><strong>Identifiers</strong></li>
+            <li><strong>Constants</strong></li>
+            <li><strong>String Constants</strong></li>
+            <li><strong>Operators</strong></li>
+        </ul>
+
+        <p>We will be looking into each of these tokens in the upcoming videos.</p>
+    </div>
+
+
+
+    <!-- Keywords in C Programming -->
+    <div class="container" id="C Programming Keywords">
+        <h1>Week 2: Keywords in C Programming</h1>
+
+        <p>In this second video, we'll study in detail the first type of token, that is, <strong>keywords</strong>. What
+            are keywords? Keywords are predefined or reserved words that have special meaning. They are reserved words
+            and they have a special meaning. For example, if I say <code>int</code>, it always means integer. It cannot
+            mean anything else.</p>
+
+        <p>In C, there are <strong>32 keywords</strong>, which is relatively fewer compared to other languages. That's
+            why we also call C a <strong>small language</strong>. As we progress in this course, we'll understand each
+            of these keywords and why we call C a small language, because in other languages, the number of keywords is
+            almost double. But here, we only need to learn these 32 keywords.</p>
+        <div class="math">
+            <div class="venn-diagram">
+                <img src="images/flow2.png" alt="">
+            </div>
+        </div>
+        <h2>Categorizing Keywords</h2>
+        <p>Let's try to categorize these keywords in different ways. One way is to categorize them depending on whether
+            they're related to <strong>data types</strong>. Data types refer to the types of identifiers. In this
+            particular slide, I've marked out all the keywords that are related to data types.</p>
+
+        <p>Some specific keywords you'll encounter include:</p>
+
+        <ul>
+            <li><code>auto</code></li>
+            <li><code>extern</code></li>
+            <li><code>register</code></li>
+            <li><code>static</code></li>
+        </ul>
+
+        <p>These keywords are encountered when we study functions, and we'll cover them in detail when we look at
+            functions.</p>
+
+        <h2>Program Example: Calculating Area of a Circle</h2>
+        <p>Now, we have a program here that I'm going to use as a running example to identify all the tokens. This
+            program computes the area of a circle. Let's look at this program in detail.</p>
+
+        <pre><code>#include &lt;stdio.h&gt; 
+// This program computes the area of a circle
+int main() {
+    float area, radius, pi;
+    radius = 5;
+    pi = 3.14;
+    area = 3.14 * radius * radius;
+    printf("\nArea of the circle: %f"\n, area);
+    return 0;
+}</code></pre>
+
+        <h2>Comments in C</h2>
+        <p>The first line is a pre-processing directive. The second line is a <strong>comment</strong>. What are
+            comments? Comments are used for adding notes or explanations within the code. For example,
+            <code>// This program computes the area of a circle</code> helps us understand the purpose of the program.
+        </p>
+
+        <p>Comments are ignored by the compiler and do not affect the program. There are two types of comments in C:</p>
+
+        <ul>
+            <li><strong>Multi-line comments</strong> - Anything written between <code>/*</code> and <code>*/</code> is a
+                multi-line comment.</li>
+            <li><strong>Single-line comments</strong> - Anything written after <code>//</code> is a single-line comment.
+            </li>
+        </ul>
+
+        <p>For example:</p>
+        <pre><code>int radius; // This is the radius of the circle</code></pre>
+
+        <h2>Identifying Keywords</h2>
+        <p>Returning to our example program, I've identified all the keywords. Here are the keywords marked in blue:</p>
+
+        <ul>
+            <li><code>int</code> - a keyword</li>
+            <li><code>main</code> - a keyword</li>
+            <li><code>float</code> - a keyword</li>
+            <li><code>return</code> - a keyword</li>
+        </ul>
+
+        <p>What's a C program? It's a sequence of characters that can be broken down into tokens. We've identified the
+            first type of token, which is <strong>keywords</strong>. In the next video, we'll look at the second type of
+            tokens, which are <strong>punctuators</strong>.</p>
+    </div>
+
+
+
+
+    <!-- Punctuators in C Programming -->
+    <div class="container" id="C Programming Punctuators">
+        <h1>Week 2: Punctuators in C Programming</h1>
+
+        <p>In this video, we look at the second type of tokens, that is, <strong>punctuators</strong>. Punctuators in C
+            have a role very similar to that of punctuation in English. Punctuators are used to separate or punctuate
+            the code. What's a punctuator? It has a <strong>semantic significance</strong>, but does not specify an
+            operation to be performed.</p>
+
+        <p>By semantic significance, I mean it has meaning. For example, if I write <code>int radius;</code>, it means
+            this is the end of the statement. It has meaning but it does not perform any operation. That's what I mean
+            by it having significant semantic significance, but not specifying any operation. Punctuators are used to
+            group tokens or terminate a list of tokens, as you can see in this example.</p>
+
+        <h2>Types of Punctuators in C</h2>
+        <ul>
+            <li><strong>Braces { }</strong> - Braces are used to indicate the start and end of a compound statement. A
+                compound statement consists of multiple statements. For example, in a <code>for</code> loop (we will
+                discuss <code>for</code> loops later), multiple statements can be grouped together using braces.
+                Statements within braces are also known as <strong>code blocks</strong>.</li>
+
+            <li><strong>Semicolon ;</strong> - The semicolon is used to terminate statements. For example,
+                <code>int radius;</code> terminates the statement.
+            </li>
+
+            <li><strong>Comma ,</strong> - The comma can be used both as a <strong>separator</strong> and as an
+                <strong>operator</strong>. In this course, we will primarily use the comma as a separator. For example,
+                <code>int radius, area;</code> separates multiple variables in a single declaration.
+            </li>
+
+            <li><strong>Colon :</strong> - The colon is used in <strong>conditional statements</strong>, like in
+                <code>switch-case</code> statements. It is also used in <strong>label statements</strong> when using the
+                <code>goto</code> statement. For example, <code>start:</code> indicates a label named "start".
+            </li>
+
+            <li><strong>Hash #</strong> - We've already seen the hash symbol in pre-processing directives. It is used to
+                include libraries, like <code>#include &lt;stdio.h&gt;</code>.</li>
+
+            <li><strong>Angle Brackets &lt; &gt;</strong> - Angle brackets are used in pre-processing directives to
+                include files, as in <code>&lt;stdio.h&gt;</code>.</li>
+
+            <li><strong>Parentheses ( )</strong> - Parentheses have two main uses: <strong>grouping expressions</strong>
+                and <strong>specifying
+                    function parameters</strong>. For example, in <code>(x * y) / z</code>, the parentheses group the
+                expression
+                <code>x * y</code>. Parentheses are also used when defining or calling functions, such as in
+                <code>main()</code> or when specifying function parameters.
+            </li>
+        </ul>
+
+        <h2>Example: Identifying Punctuators in a Program</h2>
+        <p>Let's return to our running example program, which computes the area of a circle. Here, we can identify the
+            punctuators:</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+// This program computes the area of a circle
+int main() {
+    float area, radius, pi;
+    radius = 5;
+    pi = 3.14;
+    area = 3.14 * radius * radius;
+    printf("\nArea of the circle: %f"\n, area);
+    return 0;
+}</code></pre>
+
+        <p>In this example, the punctuators are:</p>
+        <ul>
+            <li><code>{ }</code> - Used to indicate the start and end of a compound statement.</li>
+            <li><code>;</code> - Used to terminate statements.</li>
+            <li><code>,</code> - Used to separate variables.</li>
+        </ul>
+
+        <p>All the punctuators in this program are marked in green so that you can easily identify them. Punctuators
+            play a key role in structuring C programs.</p>
+    </div>
+
+    <!-- Identifiers in C Programming -->
+    <div class="container" id="C Programming Identifiers">
+        <h1>Week 2: Identifiers in C Programming</h1>
+
+        <p>In this video, we'll study the third type of token, that is, <strong>identifiers</strong>. What are
+            identifiers? Identifiers are names that are given to programming elements, particularly used for variables
+            and functions. Identifiers provide unique names to objects in a program. By "objects," we mean variables or
+            function names.</p>
+
+        <p>There are two rules to define an identifier:</p>
+        <ul>
+            <li>It should be composed of letters, digits, and the special character <strong>underscore</strong>
+                (<code>_</code>).</li>
+            <li>An identifier must start with either a letter or an underscore. The first character of an identifier
+                should be one of these two.</li>
+        </ul>
+
+        <h2>Examples of Valid Identifiers</h2>
+        <p>Let's look at some examples of valid identifiers:</p>
+        <ul>
+            <li><code>a</code> - This is a valid identifier as it starts with a letter.</li>
+            <li><code>b</code> - Another valid identifier.</li>
+            <li><code>principle</code> - A valid identifier that starts with letters.</li>
+            <li><code>i123</code> - A mix of letters and digits, which is allowed.</li>
+            <li><code>i123_xyz</code> - A valid identifier combining letters, digits, and an underscore.</li>
+            <li><code>_var</code> - Valid as it starts with an underscore.</li>
+        </ul>
+
+        <h2>Examples of Invalid Identifiers</h2>
+        <p>Here are examples of invalid identifiers and why they are not allowed:</p>
+        <ul>
+            <li><code>1ixyz</code> - Invalid because it starts with a digit. The first character must be a letter or
+                underscore.</li>
+            <li><code>not#me</code> - Invalid because it contains a special character <code>#</code>, which is not
+                allowed.</li>
+        </ul>
+
+        <p>An identifier cannot start with anything other than a letter or an underscore, and it cannot contain special
+            characters other than the underscore. It should only include letters, digits, and underscores.</p>
+
+        <h2>Example: Identifying Identifiers in a Program</h2>
+        <p>Now let's return to our running example of computing the area of a circle. Here, we'll identify the
+            identifiers used in the program:</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+#include <stdio.h>
+// This program computes the area of a circle
+int main() {
+    float area, radius, pi;
+    radius = 5;
+    pi = 3.14;
+    area = 3.14 * radius * radius;
+    printf("\nArea of the circle: %f"\n, area);
+    return 0;
+}
+</code></pre>
+
+        <p>In this example, the identifiers are:</p>
+        <ul>
+            <li><code>main</code> - This is the name of the function.</li>
+            <li><code>radius</code> - This is the name of a variable.</li>
+            <li><code>area</code> - Another variable used in the program.</li>
+        </ul>
+
+        <p>All the identifiers are marked in a different color to distinguish them easily. Identifiers are crucial for
+            naming variables and functions in a meaningful way, making the code more readable and easier to document.
+        </p>
+
+        <h2>Choosing Meaningful Identifiers</h2>
+        <p>When selecting names for identifiers, choose names that are meaningful. For example, if a variable represents
+            the radius of a circle, use <code>radius</code> as the identifier instead of something like <code>ABC</code>
+            or <code>XYZ</code>. Meaningful identifiers enhance the readability and documentation of your program. Use
+            names like <code>radius</code>, <code>area</code>, or <code>circle</code> for clarity and purpose.</p>
+    </div>
+
+    <!-- Constants and String Constants in C Programming -->
+    <div class="container" id="C Programming Constants">
+        <h1>Week 2: Constants and String Constants in C Programming</h1>
+
+        <p>So far, we have seen three types of tokens: <strong>keywords</strong>, <strong>punctuators</strong>, and
+            <strong>identifiers</strong>. In this video, we'll be looking at the fourth one, which is
+            <strong>constants</strong>, and the fifth one, which is <strong>string constants</strong>. Constants and
+            string constants are the two types of tokens we'll explore in this video.
+        </p>
+
+        <h2>Constants</h2>
+        <p>Constants are fixed values that cannot be altered during the execution of a program. There are several types
+            of constants:</p>
+
+        <ul>
+            <li><strong>Integer Constants</strong>: These represent whole numbers. Integer constants can be written in
+                different bases:
+                <ul>
+                    <li><strong>Decimal (Base 10)</strong>: For example, <code>0</code>, <code>77</code>.</li>
+                    <li><strong>Octal (Base 8)</strong>: Octal constants start with a zero, such as <code>0123</code>.
+                        In decimal, this would be calculated as <code>1(8^2) + 2(8^1) + 3(8^0)</code>.</li>
+                    <li><strong>Hexadecimal (Base 16)</strong>: Hexadecimal constants start with <code>0x</code>. For
+                        example, <code>0xfff</code>.</li>
+                </ul>
+            </li>
+            <li><strong>Floating Point Constants</strong>: These are real numbers with decimal points. For example,
+                <code>345.5</code> is a floating point constant.
+            </li>
+            <li><strong>Character Constants</strong>: Individual characters enclosed in single quotes. Examples include
+                <code>'a'</code>, <code>'b'</code>, <code>'\n'</code>, and <code>'\t'</code>.
+            </li>
+        </ul>
+
+        <h2>String Constants</h2>
+        <p>String constants consist of more than one character enclosed in a pair of double quotes. For example,
+            <code>"hello"</code> is a string constant. A <strong>null string</strong> is an empty sequence of characters
+            enclosed in double quotes, like <code>""</code>.
+        </p>
+
+        <h2>Example: Identifying Constants in a Program</h2>
+        <p>Let's return to our running example of computing the area of a circle and identify the constants:</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+// This program computes the area of a circle
+int main() {
+    float area, radius, pi;
+    radius = 5;
+    pi = 3.14;
+    area = 3.14 * radius * radius;
+    printf("\nArea of the circle: %f"\n, area);
+    return 0;
+}</code></pre>
+
+        <p>In this example, the constants are:</p>
+        <ul>
+            <li><code>5</code> - This is an integer constant, specifically a decimal constant.</li>
+            <li><code>3.14</code> - This is a floating point constant.</li>
+            <li><code>"Area of the circle: %f"</code> - This is a string constant, enclosed within double quotes.</li>
+        </ul>
+
+        <p>In this program, we have identified the <strong>keywords</strong>, <strong>identifiers</strong>,
+            <strong>punctuators</strong>, and now the <strong>constants</strong> and <strong>string constants</strong>.
+            The remaining elements are operators, which we'll cover in detail in a future video.
+        </p>
+    </div>
+
+    <!-- Operators in C Programming -->
+    <div class="container" id="C Programming Operators">
+        <h1>Week 2: Operators in C Programming</h1>
+
+        <p>So far, we have seen five types of tokens: <strong>keywords</strong>, <strong>punctuators</strong>,
+            <strong>identifiers</strong>, <strong>constants</strong>, and <strong>string constants</strong>. In this
+            video, we'll start with <strong>operators</strong>, which are perhaps the most important of all the token
+            types. There are different types of operators, and in subsequent videos, we'll learn how to use them.
+        </p>
+
+        <h2>What are Operators?</h2>
+        <p>An operator is a token that specifies an operation on at least one <strong>operand</strong> and yields a
+            result. For example:</p>
+
+        <pre><code>c = a + b;</code></pre>
+
+        <p>Here, the <code>+</code> is an <strong>operator</strong> that specifies an operation between two operands,
+            <code>a</code> and <code>b</code>. Operators act on operands to perform calculations or operations. In this
+            case:
+        </p>
+        <ul>
+            <li><strong>Operands</strong>: <code>a</code> and <code>b</code> are the operands.</li>
+            <li><strong>Operator</strong>: <code>+</code> is the operator.</li>
+        </ul>
+
+        <p>Operands can also be constants. For example, you could write:</p>
+
+        <pre><code>c = a + 5;</code></pre>
+
+        <p>Here, <code>a</code> is a variable, and <code>5</code> is a constant operand. Since the operator acts on two
+            operands, it is called a <strong>binary operator</strong>.</p>
+
+        <h2>Unary Operators</h2>
+        <p>An operator that acts on a single operand is called a <strong>unary operator</strong>. For example:</p>
+
+        <pre><code>c = a++;</code></pre>
+
+        <p>In this case, the <code>++</code> operator acts on a single operand <code>a</code>, making it a unary
+            operator.</p>
+
+        <h2>Example: Identifying Operators</h2>
+        <p>Let's look at our running example of the area of a circle and identify the operators:</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+// This program computes the area of a circle
+int main() {
+    int radius = 5;
+    float area = 3.14 * radius * radius;
+    printf("Area of the circle: %f", area);
+    return 0;
+}</code></pre>
+
+        <p>In this example, the following are operators:</p>
+        <ul>
+            <li><code>()</code> - These parentheses are operators used to call a function.</li>
+            <li><code>=</code> - This is an <strong>assignment operator</strong>, used to assign values to variables.
+            </li>
+            <li><code>*</code> - This is a <strong>multiplication operator</strong>, which is an arithmetic operator.
+            </li>
+        </ul>
+
+        <p>We'll explore different types of operators, such as arithmetic, logical, and relational operators, in future
+            videos.</p>
+
+        <h2>Summary: Tokens in C Programming</h2>
+        <p>To sum up our example of the area of a circle, we have learned that a C program is a sequence of characters.
+            The compiler groups these characters into tokens, each belonging to one of the six types of tokens:</p>
+
+        <ul>
+            <li><strong>Keywords</strong> - Highlighted in blue.</li>
+            <li><strong>Punctuators</strong> - Highlighted in green.</li>
+            <li><strong>Identifiers</strong> - Highlighted in orange.</li>
+            <li><strong>Constants</strong> - Highlighted in purple.</li>
+            <li><strong>Operators</strong> - Highlighted in black.</li>
+        </ul>
+        <div class="math">
+            <div class="venn-diagram">
+                <img src="images/flow3.png" alt="">
+            </div>
+        </div>
+        <p>The first line is a preprocessing directive, and the second line is a comment. Comments are not processed by
+            the compiler but make the code more readable. Always include comments in your programs to enhance
+            readability.</p>
+    </div>
+
+    <!-- Unary and Arithmetic Operators in C Programming -->
+    <div class="container" id="C Programming Operators">
+        <h1>Week 2: Unary and Arithmetic Operators in C Programming</h1>
+
+        <p>There are different operators in C. In this video, we'll learn about the <strong>unary operators</strong> and
+            <strong>arithmetic operators</strong>. In the last video, we discussed unary operators. A unary operator
+            operates on a single operand. Arithmetic operators, on the other hand, are binary operators, meaning they
+            operate on two operands.
+        </p>
+
+        <p><strong>Operators</strong> have rules of precedence and associativity:</p>
+        <div class="math">
+            <div class="venn-diagram">
+                <img src="images/flow4.png" alt="">
+            </div>
+        </div>
+        <ul>
+            <li><strong>Precedence</strong>: The operator with higher precedence is executed first if multiple operators
+                appear together.</li>
+            <li><strong>Associativity</strong>: Most operators follow <strong>left-to-right associativity</strong>,
+                except for unary and prefix operators.</li>
+        </ul>
+
+        <h2>Example: Precedence and Associativity</h2>
+        <p>Let's look at an example to explain precedence and associativity:</p>
+
+        <pre><code>a * b / c;</code></pre>
+        <p>Here, both multiplication and division have the same precedence, but they are evaluated from <strong>left to
+                right</strong>. So, the result of <code>a * b</code> is computed first, then divided by <code>c</code>.
+            This is an example of associativity.</p>
+
+        <pre><code>a + b / c;</code></pre>
+        <p>In this case, division has higher precedence than addition. Therefore, <code>b / c</code> is computed first,
+            and then the result is added to <code>a</code>. This demonstrates precedence.</p>
+
+        <h2>Increment and Decrement Operators</h2>
+        <p><strong>Increment</strong> (<code>++</code>) and <strong>decrement</strong> (<code>--</code>) operators can
+            be used as both suffix (postfix) and prefix operators:</p>
+        <ul>
+            <li><strong>Postfix</strong>: The operation is performed after the statement is executed.</li>
+            <li><strong>Prefix</strong>: The operation is performed before the statement is executed.</li>
+        </ul>
+
+        <h3>Postfix Example</h3>
+        <pre><code>c = a++;</code></pre>
+        <p>If <code>a</code> is <code>5</code>, then <code>c</code> will get the value <code>5</code>, and
+            <code>a</code> will be incremented to <code>6</code> after the statement is executed.
+        </p>
+
+        <h3>Prefix Example</h3>
+        <pre><code>c = ++a;</code></pre>
+        <p>If <code>a</code> is <code>5</code>, <code>c</code> will get the value <code>6</code>, as <code>a</code> is
+            incremented before the statement is executed.</p>
+
+        <h2>Modulo Operator</h2>
+        <p>The <strong>modulo operator</strong> (<code>%</code>) returns the remainder of a division. For example:</p>
+
+        <pre><code>c = 2 % 3;</code></pre>
+        <p>In this case, <code>2 % 3</code> gives a remainder of <code>2</code>, so <code>c</code> will be
+            <code>2</code>.
+        </p>
+
+        <h2>Detailed Examples</h2>
+        <div class="math">
+            <div class="venn-diagram">
+                <img src="images/flow5.png" alt="">
+            </div>
+        </div>
+        <div class="math">
+            <h3>Example 1: Integer Division</h3>
+            <pre><code>a * b / c;</code></pre>
+            <p>If <code>a = 1</code>, <code>b = 2</code>, and <code>c = 3</code>, <code>a * b = 2</code>, and
+                <code>2 / 3</code> is an integer division, so the result will be <code>0</code>.
+            </p>
+        </div>
+        <div class="math">
+            <h3>Example 2: Modulo with Addition</h3>
+            <pre><code>(a * b) % c + 1;</code></pre>
+            <p>With <code>a = 1</code>, <code>b = 2</code>, and <code>c = 3</code>, first compute
+                <code>a * b = 2</code>,
+                then <code>2 % 3 = 2</code>, and finally <code>2 + 1 = 3</code>.
+            </p>
+        </div>
+        <div class="math">
+            <h3>Example 3: Post-increment and Arithmetic</h3>
+            <pre><code>++a * b - c--;</code></pre>
+            <p>If <code>a = 1</code>, <code>b = 2</code>, and <code>c = 3</code>, the postfix increment will occur after
+                the
+                statement. So, first, compute <code>a * b = 2</code>, and <code>c--</code> will remain <code>3</code>
+                during
+                this statement.</p>
+        </div>
+        <div class="math">
+            <h3>Example 4: Prefix and Subtraction</h3>
+            <pre><code>7 - - b * ++d;</code></pre>
+            <p>If <code>b = 2</code> and <code>d = 4</code>, first increment <code>d</code> to <code>5</code>, then
+                compute
+                <code>5 * -b</code> (with <code>b</code> as <code>-2</code>), which gives <code>-10</code>. Finally,
+                compute
+                <code>7 + 10 = 17</code>.
+            </p>
+        </div>
+        <p>That’s it for this video on unary and arithmetic operators!</p>
+    </div>
+
+
+
+    <!-- Assignment Operator in C Programming -->
+    <div class="container" id="C Programming Assignment Operators">
+        <h1>Week 2: Assignment Operator in C Programming</h1>
+
+        <p>In this video, we'll examine the <strong>assignment operator</strong>. C treats the <code>=</code> (equal to
+            sign) as an operator.</p>
+
+        <p>The syntax is: the variable will be on the left-hand side, and on the right-hand side, we can have a constant
+            or expression. <br> <strong>variable = constant or expression</strong>. For example, let's say we have a
+            variable named <code>radius</code>: </pre>
+        </p>
+        <pre><code>radius = 5;</code></pre>
+
+        <p>Here, we have the variable on the left-hand side and a constant on the right-hand side. We can also have an
+            expression on the right-hand side. The <strong>associativity of the assignment operator</strong> is from
+            <strong>right to
+                left</strong>. This means that if we have multiple assignment operators in an expression, the evaluation
+            starts from right to left.
+        </p>
+
+        <h2>Example: Multiple Assignments</h2>
+        <p>Consider this expression:</p>
+
+        <pre><code>a = b = c;</code></pre>
+        <p>Assume the value of <code>b = 3</code> and <code>c = 5</code>. Since the associativity is from right to left,
+            the expression will first assign <code>c</code> to <code>b</code>. After that, <code>a</code> will get the
+            value of <code>b</code>, which is now <code>5</code>. At the end of this execution, the result will be:</p>
+
+        <pre><code>a = 5, b = 5, c = 5;</code></pre>
+
+        <h2>Compound Assignment Operators</h2>
+        <p>The assignment operator also has <strong>compound forms</strong> such as <code>+=</code>, <code>-=</code>,
+            <code>*=</code>, etc. Let’s take an example of <code>+=</code>:
+        </p>
+
+        <pre><code>c += 5;</code></pre>
+        <p>This is a shorthand for:</p>
+
+        <pre><code>c = c + 5;</code></pre>
+        <p>If the previous value of <code>c</code> was <code>2</code>, after this statement, the value of <code>c</code>
+            becomes <code>7</code>.</p>
+
+        <h2>Example: Multiplication Compound Assignment</h2>
+        <p>Let's take another example with multiplication:</p>
+
+        <pre><code>j *= k + 3;</code></pre>
+        <p>This expands to:</p>
+
+        <pre><code>j = j * (k + 3);</code></pre>
+        <p>If <code>j = 2</code> and <code>k = 3</code>, the evaluation happens as follows:</p>
+        <ul>
+            <li>First, <code>k + 3</code> is evaluated (since <code>*</code> has higher precedence than <code>+</code>).
+            </li>
+            <li>Then, the result of <code>k + 3</code> is multiplied by <code>j</code>.</li>
+        </ul>
+        <p>So, <code>j * (3 + 3) = 2 * 6 = 12</code>. Therefore, the final value of <code>j</code> will be
+            <code>12</code>.
+        </p>
+
+        <h2>Operator Table and Precedence</h2>
+        <p>We have already seen basic arithmetic operators like <code>+</code>, <code>-</code>, <code>*</code>,
+            <code>/</code>, and <code>%</code> (modulo). In the table of operators, the assignment operator
+            (<code>=</code>) has the <strong>lowest precedence</strong> of all operators, and its associativity is from
+            <strong>right to left</strong>.
+        </p>
+
+        <p>In the next video, we’ll be exploring more operators.</p>
+    </div>
+
+
+
+    <!-- Relational Operator in C Programming -->
+    <div class="container" id="C Programming Relational Operators">
+        <h1>Week 2: Relational Operator in C Programming</h1>
+
+        <p>In this video, we will be looking at one more operator, the <strong>relational operator</strong>. These
+            operators are used to compare values and determine the relationship between them. They are often used when
+            we create conditional statements or expressions. We will learn more about conditional statements in later
+            videos.</p>
+
+        <p>The associativity of relational operators is from <strong>left to right</strong>.</p>
+
+        <h2>Relational Operators</h2>
+        <p>There are four relational operators:</p>
+        <ul>
+            <li><code>&lt;</code></li>
+            <li><code>&lt;=</code></li>
+            <li><code>&gt;</code></li>
+            <li><code>&gt;=</code></li>
+        </ul>
+
+        <p>Let’s take an example:</p>
+        <pre><code>10 &gt; 7  // True</code></pre>
+        <p>This expression will evaluate to <strong>True</strong>.</p>
+
+        <p>Another example:</p>
+        <pre><code>7 &gt;= 7  // True</code></pre>
+        <p>This will also evaluate to <strong>True</strong>.</p>
+
+        <p>However, an expression like:</p>
+        <pre><code>7 &gt; 10  // False</code></pre>
+        <p>Will evaluate to <strong>False</strong>.</p>
+
+        <p><strong>True</strong> is usually represented as <code>1</code> or any non-zero value, while
+            <strong>False</strong> is represented as <code>0</code>.
+        </p>
+
+        <h2>Operator Precedence</h2>
+        <p>In the operator precedence table, relational operators have a higher precedence than the assignment operator.
+            Their associativity is from <strong>left to right</strong>.</p>
+
+        <h2>Relational Expressions</h2>
+        <p>Let’s explore how these relational expressions are evaluated. Consider two variables, <code>a</code> and
+            <code>b</code>, with some examples:
+        </p>
+
+        <ul>
+            <li>If <code>a = 5</code> and <code>b = 2</code>, then:</li>
+            <ul>
+                <li><code>a &lt; b</code> will evaluate to <code>0</code> (False).</li>
+                <li><code>a &gt; b</code> will evaluate to <code>1</code> (True).</li>
+                <li><code>a &lt;= b</code> will evaluate to <code>0</code>.</li>
+                <li><code>a &gt;= b</code> will evaluate to <code>1</code>.</li>
+            </ul>
+            <li>If <code>a = 5</code> and <code>b = 5</code>, then:</li>
+            <ul>
+                <li><code>a &lt; b</code> will evaluate to <code>0</code>.</li>
+                <li><code>a &gt; b</code> will evaluate to <code>0</code>.</li>
+                <li><code>a &lt;= b</code> will evaluate to <code>1</code>.</li>
+                <li><code>a &gt;= b</code> will evaluate to <code>1</code>.</li>
+            </ul>
+            <li>If <code>a = 2</code> and <code>b = 5</code>, then:</li>
+            <ul>
+                <li><code>a &lt; b</code> will evaluate to <code>1</code>.</li>
+                <li><code>a &gt; b</code> will evaluate to <code>0</code>.</li>
+            </ul>
+        </ul>
+
+        <h2>ASCII Values in Relational Expressions</h2>
+        <p>Sometimes, you'll see expressions with characters in single quotes, like <code>'a'</code>. These are
+            character constants, which represent ASCII values.</p>
+
+        <p><strong>ASCII</strong> stands for American Standard Code for Information Interchange. It is a character
+            encoding standard where characters (letters, digits, symbols, or control characters) are represented by
+            numeric values. Computers only understand binary, so each character is assigned a unique <strong>7-bit
+                binary number</strong>.</p>
+
+        <h2>Example: ASCII Values in Expressions</h2>
+        <p>Let’s look at this expression:</p>
+        <div class="math">
+            <pre><code>'a' + 1 &lt; 'w'</code></pre>
+            <p>The ASCII value of <code>'a'</code> is <code>97</code>, and for <code>'w'</code>, it’s <code>119</code>.
+                So
+                the expression becomes:</p>
+            <pre><code>97 + 1 &lt; 119</code></pre>
+            <p>This evaluates to <code>98 &lt; 119</code>, which is <strong>True</strong> (1).</p>
+        </div>
+        <h2>Additional Relational Expression Examples</h2>
+        <p>Let’s evaluate some more complex expressions:</p>
+        <pre><code>-i - 5 * j &gt;= k + 1</code></pre>
+        <ul>
+            <li>If <code>i = 1</code>, <code>j = 2</code>, and <code>k = -7</code>, this expands to:</li>
+            <li><code>-1 - 5 * 2 &gt;= -7 + 1</code></li>
+            <li>First, multiplication has higher precedence, so this becomes:</li>
+            <li><code>-1 - 10 &gt;= -6</code></li>
+            <li>Now, the subtraction:</li>
+            <li><code>-11 &gt;= -6</code>, which is <strong>False</strong> (0).</li>
+        </ul>
+
+        <p>Another example:</p>
+        <pre><code>3 &lt; j &lt; 5</code></pre>
+        <ul>
+            <li>If <code>j = 2</code>, the expression becomes:</li>
+            <li><code>3 &lt; 2 &lt; 5</code></li>
+            <li>Since <code>3 &lt; 2</code> is <strong>False</strong> (0), this simplifies to:</li>
+            <li><code>0 &lt; 5</code>, which is <strong>True</strong> (1).</li>
+        </ul>
+
+        <h2>Unexpected Results</h2>
+        <p>Lastly, let’s look at this expression:</p>
+        <p>x = 7e + 33, y = 0.001</p>
+        <pre><code>x &lt; x + y</code></pre>
+        <p>Where <code>x</code> is a very large number and <code>y</code> is small. Due to the limitations in the
+            machine's representation of numbers, <code>y</code> may be ignored. This causes the expression to evaluate
+            as:</p>
+        <pre><code>x &lt; x</code></pre>
+        <p>Which is <strong>False</strong> (0), resulting in an unexpected outcome.</p>
+
+        <p>In this video, we have looked at relational expressions and explored various examples. That’s all for this
+            video.</p>
+    </div>
+
+    <!-- Equality and Logical Operators -->
+    <div class="container" id="Equality and Logical Operators">
+        <h1>Week 2: Equality and Logical Operators</h1>
+
+        <p>In this video, we'll look into two operators: the equality operator and the logical operator. The equality
+            and the logical operators are used to compare values and make decisions based on the comparison result.</p>
+
+        <h2>Equality Operators</h2>
+        <p>We have two equality operators:</p>
+        <ul>
+            <li><strong>Equal to (==):</strong> Checks if the two values are equal. For example, if <code>7 == 7</code>,
+                this evaluates to true. It checks if the expression on the left-hand side is equal to the right-hand
+                side, and if that is true, then it will evaluate to true.</li>
+            <li><strong>Not equal to (!=):</strong> Checks if the two values are not equal. For example, if
+                <code>7 != 6</code>, this is true because 7 is not equal to 6. This will evaluate to true.
+            </li>
+        </ul>
+        <p>These are binary operators and yield either true or false. They take two operands.</p>
+
+        <h3>Example</h3>
+        <p>Consider the expression <code>i + j + k == -2 * -k</code> with <code>i = 1</code>, <code>j = 2</code>, and
+            <code>k = 3</code>. Let's evaluate:
+        </p>
+        <ul>
+            <li>Left-hand side: <code>i + j + k</code> = <code>1 + 2 + 3</code> = 6</li>
+            <li>Right-hand side: <code>-2 * -k</code> = <code>-2 * -3</code> = 6</li>
+        </ul>
+        <p>The expression evaluates to <code>6 == 6</code>, which is true.</p>
+
+        <h2>Logical Operators</h2>
+        <p>There are three logical operators:</p>
+        <ul>
+            <li><strong>Logical NOT (!):</strong> A unary operator that works on a single operand. If the operand is
+                zero, <code>!a</code> evaluates to true (1). If the operand is non-zero, <code>!a</code> evaluates to
+                false (0).</li>
+            <li><strong>Logical AND (&&):</strong> A binary operator that returns true if both conditions are true. It
+                has a higher precedence than logical OR.</li>
+            <li><strong>Logical OR (||):</strong> A binary operator that returns true if at least one of the conditions
+                is true. It has a lower precedence than logical AND.</li>
+        </ul>
+
+        <h3>Operator Precedence and Associativity</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Precedence</th>
+                    <th>Associativity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Logical NOT (!)</td>
+                    <td>Highest (same as unary operators)</td>
+                    <td>Right to Left</td>
+                </tr>
+                <tr>
+                    <td>Logical AND (&&)</td>
+                    <td>Higher</td>
+                    <td>Left to Right</td>
+                </tr>
+                <tr>
+                    <td>Logical OR (||)</td>
+                    <td>Lower</td>
+                    <td>Left to Right</td>
+                </tr>
+                <tr>
+                    <td>Equality (==, !=)</td>
+                    <td>Lower than relational operators</td>
+                    <td>Left to Right</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Examples</h3>
+        <p>Let's look at some examples to understand how these operators work:</p>
+        <ol>
+            <li><strong>Expression:</strong> <code>i && j && k</code> with <code>i = 3</code>, <code>j = 3</code>, and
+                <code>k = 3</code>. This evaluates to true because all operands are non-zero.
+            </li>
+            <li><strong>Expression:</strong> <code>x || (i && (j - 3))</code> with <code>x = 0.0</code>,
+                <code>i = 3</code>, <code>j = 3</code>. This evaluates to false because <code>3 - 3</code> is zero and
+                <code>0 || 0</code> is false.
+            </li>
+            <li><strong>Expression:</strong> <code>i < j || x < y</code> with <code>i = 3</code>, <code>j = 3</code>,
+                <code>x = 0.0</code>, and <code>y = 2.3</code>. This evaluates to true because <code>3 < 3</code> is
+                false but <code>0.0 < 2.3</code> is true.
+            </li>
+            <li><strong>Expression:</strong> <code>(c - 1) || (c + 1)</code> with <code>c = 66</code>. This evaluates to
+                true because <code>66 - 1</code> is true, so the overall expression evaluates to true without needing to
+                evaluate the second part.</li>
+        </ol>
+
+        <p>In this video, we have covered two types of operators: equality operators and logical operators. We have seen
+            examples of how these operators are evaluated and how their precedence and associativity affect the result.
+        </p>
+    </div>
+
+    <!-- Footer 
+    <footer class="footer">
+        <p>&copy; 2024 Advanced Note Uploader. All rights reserved.</p>
+    </footer>
+    -->
+
+</body>
+
+</html>

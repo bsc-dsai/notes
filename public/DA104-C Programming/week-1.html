@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Operations and Properties</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header" id="head">
+            <header>
+                <!--<div class="logo">
+                    <img src="https://i.postimg.cc/k5z6M5h7/logo-jpg.png" alt="Site Logo">
+                </div> -->
+                <nav>
+                    <a href="home.html">
+                        <h1>Home</h1>
+                    </a>
+                    <a href="../index.html">
+                        <h1>Subject</h1>
+                    </a>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+
+    <!---->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="https://i.postimg.cc/k5z6M5h7/logo-jpg.png" alt="Site Logo">
+        </div>
+
+        <ul>
+            <!--
+            <li><a href="#Introduction to Probability">Introduction to Probability</a></li>
+            <li><a href="#Relative Frequency Definition of Probability">Relative Frequency Definition of Probability</a>
+            </li>
+            <li><a href="#Introduction to sample space, events">Sample Space</a></li>
+            <li><a href="#Categorizing Sample Spaces">Categorizing Sample Spaces</a></li>
+            <li><a href="#Set Operations and Properties">Set Operations and Properties</a></li>
+            <li><a href="#Axioms of probability">Axioms of probability</a></li>
+            <li><a href="#Complement Rule of Probability">Property: Complement Rule of Probability</a></li>
+            <li><a href="#Property: P(Φ) = 0">Property: P(Φ) = 0</a></li>
+            <li><a href="#Property: P(A ∪ B) for Non-Mutually Exclusive Sets">Property: P(A ∪ B) for Non-Mutually
+                    Exclusive Sets</a></li>
+            <li><a href="#Property: P(A) ≤ P(B) if A ⊆ B">Property: P(A) ≤ P(B) if A ⊆ B</a></li>
+            -->
+
+        </ul>
+
+    </div>
+
+    <!-- Computer System Fundamentals -->
+    <div class="container" id="Computer System Fundamentals">
+        <h1>Week 1: Computer System Fundamentals Part 1</h1>
+
+        <p>We have had an overview of how the course will run in the last few videos. Today we are ready to start with
+            the actual learning. We'll begin with some computer system fundamentals. We'll have an overview of what a
+            computer system is, including its hardware and software components. However, learning the entire computer
+            system is a huge task, so we'll focus on the computer system from the perspective of programming.</p>
+        <h2>Overview of Computer System Components</h2>
+        <p>A computer system, as you can see, consists of four main components. At the top, we have the users— that's
+            you and me. The users generally interact with an application software, but they can also interact directly
+            with the operating system. The application software runs on top of the operating system, and the operating
+            system controls the hardware. This is how the entire system works together.</p>
+        <h2>Examples of Application Software</h2>
+        <p>Some examples of application software include Microsoft Word. In this course, we'll be using a compiler
+            extensively, and a compiler is also an example of application software.</p>
+        <h2>Examples of Operating Systems</h2>
+        <p>Examples of operating systems include Microsoft Windows, Linux, Mac OS, and so on. Finally, we have hardware.
+            The hardware we are considering here includes your laptop or desktop.</p>
+        <h2>Hardware: System Unit</h2>
+        <p>Let's look in more detail at the hardware. The hardware components of a computer system include your monitor,
+            keyboard, and speakers, but our primary focus is the system unit. While it's often called the CPU, its
+            actual name is the system unit.</p>
+        <h3>Power Supply (SMPS)</h3>
+        <p>One of the first things we'll see inside the system unit is the power supply, also called the SMPS (Switched
+            Mode Power Supply). Its function is to convert AC (Alternating Current) to DC (Direct Current). All
+            components within the computer system operate on DC power.</p>
+        <h3>Motherboard and CPU</h3>
+        <p>On the motherboard, the central component we'll focus on is the CPU (Central Processing Unit). The CPU
+            performs all the processing, including arithmetic and logic operations, and controls the hardware. The
+            instructions for our programs (like C programs) are stored in the memory, which is the RAM (Random Access
+            Memory).</p>
+        <h2>Memory and Storage</h2>
+        <p>The RAM is volatile, meaning once you write your program, you need to save it. When saved, it is stored in
+            the secondary storage, which can be a hard disk drive (HDD) or a solid-state drive (SSD).</p>
+        <h2>The von Neumann Architecture</h2>
+        <p>John von Neumann, a famous scientist, proposed the von Neumann architecture, which simplifies the study of
+            computer systems. Most modern computer systems follow this architecture. The von Neumann architecture
+            consists of four components:</p>
+        <div class="math">
+            <ul>
+                <li><strong>Memory:</strong> Stores data and programs. It is volatile and requires secondary storage to
+                    save
+                    data.</li>
+                <li><strong>Control Unit:</strong> Executes programs and manages the flow of data.</li>
+                <li><strong>Arithmetic and Logic Unit (ALU):</strong> Performs arithmetic and logic operations requested
+                    by
+                    the program.</li>
+                <li><strong>Input and Output (I/O):</strong> Devices that allow interaction with the computer system.
+                </li>
+            </ul>
+        </div>
+        <p>All these components are connected by a bus, a communication subsystem that links the components of the
+            system unit.</p>
+        <h2>Memory Structure</h2>
+        <p>Let's look more closely at the memory. There are two important aspects:</p>
+        <div class="math">
+            <ul>
+                <li><strong>Storage Unit:</strong> This is where the actual bits and bytes are stored.</li>
+                <li><strong>Address:</strong> This refers to the specific location in memory where data is stored.</li>
+            </ul>
+        </div>
+        <p>The size of the memory determines how much data can be stored. For example, if <code>N = 4</code>, then you
+            can have <code>2^4</code> storage units. Another important factor is the <strong>width of the
+                memory</strong>, which refers to the number of bits that can be read at one time. A 32-bit CPU can read
+            32 bits at a time, and a 64-bit CPU can read 64 bits at a time.</p>
+        <h2>Memory Sizes</h2>
+        <p>The typical memory sizes for personal computers and laptops are measured in gigabytes. Other memory sizes
+            include kilobytes, megabytes, and terabytes.</p>
+        <p>That's all we have for this lecture. In the next lecture, we'll dive deeper into computer architecture and
+            programming concepts.</p>
+    </div>
+
+
+    <!-- Computer System Fundamentals: Part 2 -->
+    <div class="container" id="Computer System Fundamentals Part 2">
+        <h1>Week 1: Computer System Fundamentals - Part 2</h1>
+        <p>Welcome to the second part of the computer system fundamentals. In the last video lecture, we discussed
+            hardware and its various components. Today, we'll focus on the higher-level components: the operating system
+            and application software.</p>
+        <h2>Overview of Application Software</h2>
+        <p>This is an overview of the application software in a computer system. As seen in the slide, there are
+            multiple users, each performing different tasks. For example:</p>
+        <ul>
+            <li><strong>User 1:</strong> Working on a compiler</li>
+            <li><strong>User 2:</strong> Using an assembler</li>
+            <li><strong>User 3:</strong> Editing text in a text editor</li>
+            <li><strong>nth User:</strong> Managing a database system</li>
+        </ul>
+        <p>All these application software programs run on top of the operating system.</p>
+        <h2>What is an Operating System?</h2>
+        <p>An operating system (OS) acts as an interface between application software and hardware. It serves as a
+            bridge between the two.</p>
+        <blockquote>
+            <strong>Formal Definition:</strong> An operating system is a layer between the application software and the
+            hardware.
+        </blockquote>
+        <h3>Goals of an Operating System</h3>
+        <ul>
+            <li><strong>Abstraction:</strong> It hides the hardware details. For example, when you save a program, the
+                OS takes care of saving it to the hard disk, while hiding the underlying hardware processes from the
+                user.</li>
+            <li><strong>Efficient Use of Hardware:</strong> The OS allows multiple users to share the same hardware,
+                making it seem as if each user has full control over the system.</li>
+            <li><strong>Protection:</strong> The OS ensures that users cannot see or access each other's work unless
+                permitted.</li>
+        </ul>
+        <h2>What is Application Software?</h2>
+        <p>While the OS is called system software because it controls the hardware, application software is designed to
+            perform specific tasks. Some examples include:</p>
+        <ul>
+            <li><strong>Compiler:</strong> Translates a C program into machine language.</li>
+            <li><strong>Text Editor:</strong> Used for typing text.</li>
+            <li><strong>Database System:</strong> Used for saving records.</li>
+        </ul>
+        <h3>Machine Code and High-Level Languages</h3>
+        <p>The computer understands only binary code (zeros and ones), known as machine code. While machine code is very
+            efficient for the computer to decode, it's difficult for humans to read and write. That's why we have
+            high-level languages such as:</p>
+        <ul>
+            <li>C</li>
+            <li>Fortran</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+        <p>High-level languages use English-like syntax, making them easier for humans to understand.</p>
+        <h3>The Role of a Compiler</h3>
+        <p>Since computers only understand machine code, we need a compiler to translate high-level language
+            instructions into machine code.</p>
+        <p>In the next video, we will learn how to write a C program.</p>
+    </div>
+
+    <!-- Introduction to Algorithms -->
+    <div class="container" id="Introduction to Algorithms">
+        <h1>Week 1: Introduction to Algorithms</h1>
+
+        <p>In this video, we will learn about an important concept: algorithms.</p>
+
+        <h2>What is an Algorithm?</h2>
+        <p>Flowchart is nothing but a graphical representation of an algorithm. They mean the same thing. In this video,
+            I'll give you an introduction to algorithms and their definition. Later on in your program, you will have a
+            full course on algorithms.</p>
+
+        <p>A typical programming task involves two phases:</p>
+        <ol>
+            <li><strong>Problem-Solving Phase:</strong> In this phase, we produce an ordered sequence of steps that
+                describes a solution to the problem. Emphasis on the word "ordered" means that steps must be followed in
+                a specific sequence. For example, to make French fries, you first cut the potatoes and then put them in
+                the frying pan. You cannot do it in reverse. This sequence of steps is called an algorithm.</li>
+            <li><strong>Implementation Phase:</strong> In this phase, we translate the sequence of steps into a program
+                using a programming language. In this course, we will use the C programming language to translate the
+                sequence of steps into a program.</li>
+        </ol>
+
+        <p>For very simple problems, you might not need to write a detailed algorithm and can start programming
+            directly.</p>
+
+        <h2>Example: Finding the Largest of Two Values</h2>
+        <p>Let's understand algorithms with an example. The task is to read in two values and find out which one is
+            larger. We want to print this with an identifying message, such as "The largest of the two is 7." Here is
+            the algorithm for this task:</p>
+        <ol>
+            <li>Read in two values: <em>value 1</em> and <em>value 2</em>.</li>
+            <li>Compare the two values:
+                <ul>
+                    <li>If <em>value 1</em> is greater than <em>value 2</em>, assign <em>value 1</em> to <em>max</em>.
+                    </li>
+                    <li>If <em>value 1</em> is not greater than <em>value 2</em>, assign <em>value 2</em> to
+                        <em>max</em>.
+                    </li>
+                </ul>
+            </li>
+            <li>Print "The largest value is <em>max</em>."</li>
+        </ol>
+
+        <h2>Characteristics of an Algorithm</h2>
+        <ul>
+            <li><strong>Takes Input:</strong> An algorithm takes input values.</li>
+            <li><strong>Produces Output:</strong> An algorithm produces output values.</li>
+            <li><strong>Simple and Unambiguous Steps:</strong> The steps are clear and straightforward. For example,
+                comparing <em>value 1</em> with <em>value 2</em> and assigning the larger value to <em>max</em>.</li>
+            <li><strong>Finite Time:</strong> Each step of the algorithm takes a finite amount of time to complete. For
+                example, assigning a value to <em>max</em> happens in a finite time.</li>
+        </ul>
+
+        <h2>Converting Algorithms to Flowcharts</h2>
+        <p>Now, let's convert the above algorithm into a flowchart. In a flowchart:</p>
+        <ul>
+            <li><strong>Input and Output:</strong> Represented by parallelograms. For instance, taking input values
+                <em>value 1</em> and <em>value 2</em> is shown with a parallelogram.
+            </li>
+            <li><strong>Comparison:</strong> Represented by diamond shapes. Comparing <em>value 1</em> with <em>value
+                    2</em> is shown with a diamond shape.</li>
+            <li><strong>Processing:</strong> Represented by rectangles. Assigning <em>value 1</em> or <em>value 2</em>
+                to <em>max</em> is shown with a rectangle.</li>
+            <li><strong>Flow of Control:</strong> Shown by arrows connecting the shapes, indicating the sequence of
+                steps.</li>
+        </ul>
+
+        <p>In the next video, we will learn how to convert this algorithm or flowchart into programming code. Thank you!
+        </p>
+    </div>
+
+
+    <!-- Introduction to Linux Operating System -->
+    <div class="container" id="Introduction to Linux Operating System">
+        <h1>Week 1: Linux Primer I</h1>
+
+        <p>In this video, we'll study the Linux operating system. The reason is that we'll be doing all our lab
+            exercises in a Linux environment using the GNU C compiler. Linux is a widely used open-source operating
+            system kernel that serves as the core component of various Unix-like operating systems. Linux was first
+            launched on September 17, 1991, by Linus Torvalds. Here's Linus Torvalds:</p>
+        <img src="linus_torvalds.jpg" alt="Linus Torvalds" />
+
+        <p>A Finnish-American software engineer, Linus Torvalds initiated Linux. One reason Linux is popular is that it
+            is distributed under an open-source license, meaning its source code is freely available to the public.</p>
+
+        <p>Here's Richard Stallman:</p>
+        <img src="richard_stallman.jpg" alt="Richard Stallman" />
+
+        <p>Richard Stallman is an American computer programmer and the founder of the Free Software Foundation (FSF). He
+            is known for the development of the GNU Project, which provides essential software components for free. One
+            of these is the GNU C compiler. Linux is a free operating system distributed under the open-source license.
+            The GNU utilities include software components that are free, such as the C compiler.</p>
+
+        <h2>What is Linux?</h2>
+        <p>Linux is a Unix clone written from scratch by Linus Torvalds, with assistance from a loosely-knit team of
+            developers across the net. By "loosely-knit," it means they were not paid but collaborated out of interest.
+            It is a clone of Unix, meaning its operation is very similar to Unix.</p>
+
+        <h2>What is Unix?</h2>
+        <p>Unix is a multitasking operating system, meaning a user can perform multiple tasks simultaneously. For
+            example, you can compile code, write a C program, and listen to music at the same time. Unix is also
+            multi-user, allowing multiple users to work on the same machine concurrently. While Windows is popular among
+            desktop operating systems, Linux is prevalent among web servers due to its resistance to viruses.</p>
+
+        <h2>Linux Distributions</h2>
+        <p>When a user wants to obtain the Linux operating system, they typically download one of the Linux
+            distributions. A Linux distribution includes the Linux kernel and additional software libraries and
+            utilities from the GNU project, creating a complete operating system. Some popular distributions are:</p>
+        <ul>
+            <li><strong>Ubuntu:</strong> A user-friendly distribution known for its ease of use.</li>
+            <li><strong>Debian:</strong> Known for its stability and large repository of software.</li>
+            <li><strong>CentOS:</strong> A distribution designed for enterprise environments, based on Red Hat
+                Enterprise Linux.</li>
+        </ul>
+
+        <h2>Connecting to a Linux System</h2>
+        <p>To connect to a Linux system, you can:</p>
+        <ol>
+            <li><strong>Log in directly:</strong> Sit in front of a terminal and log in using a username and password,
+                similar to Windows.</li>
+            <li><strong>Connect remotely:</strong> You can use text mode through SSH (Secure Shell) or a graphical
+                interface via RDP (Remote Desktop Protocol) from Windows, providing a Windows-like environment on Linux.
+                Note that graphical interfaces may require more bandwidth compared to text mode.</li>
+        </ol>
+
+        <h2>The Terminal</h2>
+        <p>Once logged into a Linux system, you'll use a terminal for all your work, such as writing and compiling C
+            programs. Here’s what a typical terminal looks like:</p>
+        <img src="linux_terminal.jpg" alt="Linux Terminal" />
+
+        <p>When you log in, you see your username, the name of the server, and the dollar prompt ($). This prompt
+            indicates that the terminal is ready to accept commands. For example:</p>
+        <div class="math">
+            <pre><code>user@maths9:~$ </code></pre>
+        </div>
+
+        <h2>The Shell</h2>
+        <p>The shell is a command interpreter that processes commands entered in the terminal. It communicates with the
+            core of the operating system (the kernel). Popular shells include:</p>
+        <ul>
+            <li><strong>sh (Bourne Shell)</strong></li>
+            <li><strong>ksh (Korn Shell)</strong></li>
+            <li><strong>bash (Bourne Again Shell)</strong>: The default shell in many Linux distributions. For this
+                tutorial, we’ll use bash. Shell commands are case-sensitive, so <code>LS</code> and <code>ls</code> are
+                different.</li>
+        </ul>
+
+        <h2>Getting Help in Linux</h2>
+        <p>If you need help with a command, you can use:</p>
+        <ul>
+            <li><strong>man:</strong> Stands for manual. For example, to learn about the <code>echo</code> command, type
+                <code>man echo</code>.
+            </li>
+            <li><strong>info:</strong> Another way to get help, but <code>man</code> is more commonly used.</li>
+        </ul>
+        <p>Type <code>man [command]</code> to find out what a command does and its available options.</p>
+    </div>
+
+
+
+    <!-- Linux Commands and File System Hierarchy -->
+    <div class="container" id="Linux Commands and File System Hierarchy">
+        <h1>Week 1: Linux Primer II</h1>
+
+        <p>In this video, we'll learn some of the most commonly used Linux commands.</p>
+
+        <h2>Linux File System Hierarchy</h2>
+        <p>The file structure of Linux, also known as the Linux file system hierarchy, is organized in a hierarchical
+            manner, starting from the root and branching out into various subdirectories. So this is the root, and below
+            this, you'll find the different subdirectories.</p>
+
+        <p>One of the subdirectories that you'll find below root is <strong>boot</strong>. Boot means start. All the
+            files related to starting the operating system are found in the boot directory.</p>
+
+        <p><strong>user</strong> contains user-accessible programs, libraries, and data files. For example, the
+            libraries of C will also be in this subdirectory.</p>
+
+        <p><strong>bin</strong> stores all the executables. For instance, the C compiler that we'll be using is GCC, so
+            all of those executables are in the bin directory. Bin stands for binary files.</p>
+
+        <h2>Commonly Used Commands</h2>
+        <p>Here are some of the kick-start commands that we'll be using:</p>
+        <ul>
+            <li><code>passwd</code> - Change your password.</li>
+            <li><code>logout</code> - Log out from the current session.</li>
+        </ul>
+
+        <p>All of these commands are typed in the terminal, and the shell interprets these commands.</p>
+
+        <p><strong>ls</strong> stands for list files and directories. Typing <code>ls</code> at the dollar prompt will
+            show all the files in the current directory. To make a directory, type <code>mkdir</code>; to enter into a
+            directory, use <code>cd</code>; to remove a directory, use <code>rmdir</code>; to display the contents of a
+            file, use <code>cat</code> followed by the file name. I will log into the Linux system in a later video to
+            show how these commands work.</p>
+
+        <p>We will use the <code>ls</code> command frequently to view the files in the current directory. The
+            <code>ls</code> command has many options:
+        </p>
+        <ul>
+            <li><code>ls -l</code> - Performs a long list, displaying a lot of information.</li>
+            <li><code>ls -t</code> - Displays files in terms of their modification time.</li>
+        </ul>
+
+        <p>To remember all of these options, you can use the <code>man</code> command. For example, <code>man ls</code>
+            will show you what the <code>ls</code> command does and the different flags that can be used with it. The
+            <code>man</code> command provides the manual for various commands. As you become more familiar with Linux,
+            you may not need to refer to <code>man ls</code> as often.
+        </p>
+
+        <p>The <code>ls -l</code> command displays detailed information about files, such as permissions, ownership, and
+            file names. The <code>d</code> at the beginning indicates a directory, while files do not have this
+            indicator.</p>
+
+        <h2>Viewing File Contents</h2>
+        <p>To view the contents of a file, use <code>cat</code>. There are other commands for viewing file contents in
+            different ways:</p>
+        <ul>
+            <li><code>less</code> - Views file contents one screen at a time.</li>
+            <li><code>head</code> - Displays the beginning of the file.</li>
+            <li><code>tail</code> - Displays the end of the file.</li>
+        </ul>
+
+        <h2>Finding and Archiving Files</h2>
+        <p>To find where a particular file resides, use <code>which [file name]</code> for the part name of the file or
+            <code>locate [file name]</code> to return the location of the file. To archive files, use <code>tar</code>
+            or <code>gzip</code>.
+        </p>
+
+        <p><code>touch</code> updates the timestamp of a file to the current time. Pipelining is a technique where the
+            output of one command is used as input for another. For example, <code>ls -l | wc -l</code> counts the
+            number of lines from the <code>ls -l</code> output.</p>
+
+        <h2>Additional Commands</h2>
+        <ul>
+            <li><code>pwd</code> - Displays the current working directory.</li>
+            <li><code>rm</code> - Deletes a file.</li>
+            <li><code>mv</code> - Moves or renames a file.</li>
+            <li><code>cp</code> - Copies a file.</li>
+            <li><code>ps</code> - Shows the list and information about running processes.</li>
+        </ul>
+
+        <h2>Piping and File Permissions</h2>
+        <p>Piping is a form of redirection that transfers standard output as input to another process. For instance, the
+            output of one command can be piped into another command.</p>
+
+        <p>When working with files, we will use text editors to type C programs. Two common text editors are:</p>
+        <ul>
+            <li><strong>gedit</strong> - A graphical text editor that is easier for beginners.</li>
+            <li><strong>vi</strong> - A text-mode editor with a steeper learning curve but is quicker once mastered.
+            </li>
+        </ul>
+
+        <h2>File Permissions</h2>
+        <p>In a long list format, file permissions are displayed. These include:</p>
+        <ul>
+            <li><code>r</code> - Read permission (value 4).</li>
+            <li><code>w</code> - Write permission (value 2).</li>
+            <li><code>x</code> - Execute permission (value 1).</li>
+        </ul>
+
+        <h2>File Manipulation Command</h2>
+        <p>-drwxr-xr-x 1 iyursmilx iyursmilx 512 Sep 4 12:28 iyursmilx</p>
+        <ul>
+            <li>FIRST(rwx)user----read(4),write(2),execute(1)</li>
+            <li>SECOND(r-x)group---read(4),execute(1)</li>
+            <li>THIRD(r-x)others---read(4),execute(1)</li>
+        </ul>
+
+        <div class="important">
+            <p>
+                to cahnge the permission to file or a folder
+                chmod ??? <name>-change file permisssion</p>
+        </div>
+
+
+        <p>For example, <code>chmod 755 hello.c</code> sets permissions where the owner has read, write, and execute
+            permissions, and the group and others have read and execute permissions. You can change permissions using
+            the <code>chmod</code> command, but be cautious as improper use may expose your files to unwanted access.
+        </p>
+
+        <p>Additionally, you can change the group and ownership of a file using <code>chgrp</code> and
+            <code>chown</code>, respectively. To report on file system usage, you can use commands to check disk usage.
+        </p>
+
+        <p>In this video, we covered frequently used Linux commands. In the next video, I will demonstrate how these
+            commands work by logging into the Linux system.</p>
+    </div>
+
+
+    <!-- History and Evolution of C -->
+    <div class="container" id="history-and-evolution-of-c">
+        <h1>Week 1: History of C</h1>
+
+        <p>C has been designed by Dennis Ritchie and evolved from two previous languages, BCPL and B.</p>
+
+        <p><strong>BCPL</strong> stands for Basic Combined Programming Language, and B was its simplified successor.</p>
+
+        <p>Since C evolved from B, it was named as C. Dennis Ritchie developed C to create the UNIX operating system,
+            and for this contribution, he received the Turing Award, which is the highest honor in computer science.</p>
+
+        <p>C was designed in the early 1970s, around 1972-73. By the late 1970s, it had evolved into what is called
+            Traditional C, with multiple flavors available. In 1989, the American National Standard Institute (ANSI)
+            standardized C, creating ANSI C, which was later updated in 1999.</p>
+    </div>
+
+    <!-- First C Program: Hello World -->
+    <div class="container" id="first-c-program">
+        <h1>Week 1: First C Program: Hello World</h1>
+
+        <p>Now, here is our first C program, commonly referred to as the <strong>Hello World</strong> program. This
+            simple program outputs the words <strong>Hello World</strong> when compiled and executed.</p>
+
+        <p>To write and execute this program, follow these steps:</p>
+
+        <ol>
+            <li>Type the program in a text editor and save it as <code>hello.c</code>.</li>
+            <li>Compile the program using a C compiler. If you are using Linux, the GNU C Compiler (gcc) can be used.
+                The command to compile is:</li>
+        </ol>
+
+        <div class="math">
+            <pre><code>gcc hello.c -o hello</code></pre>
+        </div>
+
+        <p>This command creates an executable named <code>hello</code>.</p>
+
+        <p>To run the program, use the following command:</p>
+
+        <div class="math">
+            <pre><code>./hello</code></pre>
+        </div>
+
+        <p>The output will be:</p>
+        <div class="math">
+            <pre><code>Hello World</code></pre>
+        </div>
+
+        <h2>Compiler Options</h2>
+        <p>There are multiple options available while compiling a C program. You can view these options by typing:</p>
+
+        <div class="math">
+            <pre><code>gcc --help</code></pre>
+        </div>
+
+        <p>This command displays all available compiler options for further customization.</p>
+    </div>
+
+
+
+    <!-- Detailed Explanation of the Hello World Program -->
+    <div class="container" id="HelloWorldProgram">
+        <h1>Week 1: Hello World Program in C</h1>
+
+        <p>In this video, we typed out the "Hello World" program in a text editor, compiled it, and ran it. When we
+            executed the program, it produced the output: <strong>Hello World</strong>. Let's now take a closer look at
+            what the program does.</p>
+
+        <h2>Preprocessing Directive</h2>
+        <p>The first line of the program starts with a <code>#</code>. Lines that begin with this symbol are called
+            <em>preprocessing directives</em>. These lines are processed by the preprocessor, which is not part of the
+            compiler. The preprocessor's job is to include the contents of the file <code>stdio.h</code> in the program.
+            This file contains information required for functions like <code>printf</code>, which we use to display
+            text.
+        </p>
+
+        <p>The angle brackets around <code>stdio.h</code> (i.e., <code>&lt;&gt;</code>) indicate that the file is
+            located in the standard header file directory. In Linux, for example, it is typically found in
+            <code>/usr/include</code>.
+        </p>
+
+        <h2>Main Function</h2>
+        <p><code>main</code> is the name of a function. It is the first function that the compiler will execute. The
+            <code>int</code> before <code>main</code> tells the compiler that this function will return an integer. The
+            keyword <code>void</code> inside the parentheses means that the function takes no parameters.
+        </p>
+
+        <p>The braces (<code>{}</code>) denote the beginning and end of the function, which is referred to as the
+            function body. These braces are also called <em>punctuators</em> in C.</p>
+
+        <h2>Printf Function</h2>
+        <p>The <code>printf</code> function is responsible for printing text to the console. The string
+            <code>"Hello World"</code> is passed as an argument to <code>printf</code>, which then displays it. The
+            escape sequence <code>\n</code> represents a newline character, so after printing "Hello World," the cursor
+            moves to the next line.
+        </p>
+
+        <h2>Return Statement</h2>
+        <p>Finally, we have <code>return 0;</code>. This statement tells the program to return the value 0 to the
+            operating system, indicating that the program has executed successfully. The reason we use
+            <code>return 0</code> is that we declared the <code>main</code> function to return an integer
+            (<code>int</code>), and this is fulfilling that requirement.
+        </p>
+
+        <h2>Semicolons in C</h2>
+        <p>All C statements, such as <code>printf</code> and <code>return</code>, must end with a semicolon
+            (<code>;</code>). This is a fundamental syntax rule in C.</p>
+
+        <p>In the upcoming videos, we'll dive deeper into the syntax and structure of C programs.</p>
+    </div>
+
+    <!-- C Program to Find the Largest of Two Values -->
+    <div class="container" id="largest-of-two-values">
+        <h1>Week 1: Converting Algorithm to C Code: Largest of Two Values</h1>
+
+        <p>In this section, we will complete the task of converting an algorithm to a C program. This process involves
+            two main phases:</p>
+        <ol>
+            <li><strong>Problem-solving phase:</strong> Writing an algorithm that describes a solution to the problem.
+            </li>
+            <li><strong>Translation phase:</strong> Translating the algorithm into a C code.</li>
+        </ol>
+
+        <p>We'll convert the following algorithm, which finds the largest of two values, into a C program:</p>
+
+        <div class="math">
+            <pre><code>
+Algorithm:
+1. Start
+2. Read value1, value2
+3. If value1 > value2, then
+   max = value1
+   else max = value2
+4. Print max
+5. Stop
+    </code></pre>
+        </div>
+
+        <h2>Step-by-Step C Code</h2>
+
+        <p>Let’s walk through the conversion of the algorithm into a C code.</p>
+
+        <h3>Including Libraries</h3>
+        <p>The first step is to include the necessary libraries for input and output. For the <code>printf</code> and
+            <code>scanf</code> functions, we use the <code>#include &lt;stdio.h&gt;</code> directive:
+        </p>
+
+        <div class="math">
+            <pre><code>#include &lt;stdio.h&gt;</code></pre>
+        </div>
+
+        <h3>Writing the Main Function</h3>
+        <p>Next, we define the main function, which is the entry point of a C program. It returns an integer type (int)
+            and does not take any parameters, so we use <code>void</code>:</p>
+
+        <div class="math">
+            <pre><code>int main(void) {
+    </code></pre>
+        </div>
+
+        <h3>Declaring Variables</h3>
+        <p>We need to declare the variables that will store the two input values and the maximum value. We declare them
+            as integers:</p>
+
+        <div class="math">
+            <pre><code>int val1, val2, max;</code></pre>
+        </div>
+
+        <h3>Reading Input</h3>
+        <p>To read the input values, we use the <code>scanf</code> function. Since we are reading integers, we use the
+            format specifier <code>%d</code> along with the addresses of the variables (using <code>&amp;</code>):</p>
+
+        <div class="math">
+            <pre><code>scanf("%d %d", &amp;val1, &amp;val2);</code></pre>
+        </div>
+
+        <h3>Comparing Values</h3>
+        <p>Next, we compare the two values using an if-else statement. If <code>val1</code> is greater than
+            <code>val2</code>,
+            we assign <code>val1</code> to <code>max</code>. Otherwise, we assign <code>val2</code> to <code>max</code>:
+        </p>
+
+        <div class="math">
+            <pre><code>if (val1 > val2) {
+        max = val1;
+    } else {
+        max = val2;
+    }</code></pre>
+        </div>
+
+        <h3>Printing the Result</h3>
+        <p>Finally, we print the maximum value using the <code>printf</code> function:</p>
+
+        <div class="math">
+            <pre><code>printf("The largest value is: %d", max);</code></pre>
+        </div>
+
+        <h3>Ending the Program</h3>
+        <p>We close the main function with a return statement to indicate successful execution:</p>
+        <div class="math">
+            <pre><code>return 0;
+}</code></pre>
+        </div>
+        <h2>Complete C Program</h2>
+        <p>Here is the full C program to find the largest of two values:</p>
+        <div class="math">
+
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int val1, val2, max;
+    scanf("%d %d", &amp;val1, &amp;val2);
+
+    if (val1 > val2) {
+        max = val1;
+    } else {
+        max = val2;
+    }
+
+    printf("The largest value is: %d", max);
+    return 0;
+}
+    </code></pre>
+        </div>
+
+        <p>You can now run this program in your lab and check the output by providing different input values.</p>
+    </div>
+
+
+    <!-- Introduction to Input and Output Statements in C -->
+    <div class="container" id="input_output_in_c">
+        <h1>Week 1: Input and Output in C</h1>
+
+        <p>In this section, we'll explore input and output statements in C, which allow users to interact with a
+            program.
+            Two of the most commonly used statements are <code>scanf</code> for input and <code>printf</code> for
+            output.
+            You've already seen <code>printf</code> in action in the "Hello World" program. Let's now dive deeper into
+            these functions.</p>
+
+        <h2>Using <code>scanf</code> for Input</h2>
+        <p>The <code>scanf</code> function is used to read input from the standard input (usually the keyboard). The
+            function
+            is declared in the <code>stdio.h</code> library, so we need to include this file when using input and output
+            statements
+            in our program.</p>
+
+        <p><code>scanf</code> works by reading formatted input, which requires <strong>format specifiers</strong> to
+            indicate
+            the data type being read. For example, <code>%d</code> is used to read an integer. Here is how it works:</p>
+
+        <div class="math">
+            <pre><code>
+    int radius;
+    scanf("%d", &radius);  // Read an integer and store it in 'radius'
+    </code></pre>
+        </div>
+
+        <p>In this case, <code>%d</code> is the format specifier for an integer, and <code>&radius</code> refers to the
+            address
+            of the variable where the input will be stored. Other format specifiers include:</p>
+        <ul>
+            <li><code>%c</code>: For reading a character</li>
+            <li><code>%f</code>: For reading a floating-point number</li>
+            <li><code>%s</code>: For reading a string</li>
+        </ul>
+
+        <h2>Using <code>printf</code> for Output</h2>
+        <p>The <code>printf</code> function outputs data to the standard output (usually the monitor). Like
+            <code>scanf</code>,
+            <code>printf</code> uses format specifiers to format the output. For example, to print an integer, use
+            <code>%d</code>.
+        </p>
+        <div class="math">
+            <pre><code>
+    printf("The value of radius is %d", radius);  // Output the value of 'radius'
+    </code></pre>
+        </div>
+
+        <p>In this case, <code>%d</code> will be replaced by the value stored in <code>radius</code>. Here are some
+            other format
+            specifiers:</p>
+        <ul>
+            <li><code>%c</code>: For printing a character</li>
+            <li><code>%f</code>: For printing a floating-point number</li>
+            <li><code>%s</code>: For printing a string</li>
+        </ul>
+
+        <h2>Example Program: Adding Two Integers</h2>
+        <p>Let's write a program that uses <code>scanf</code> to input two integers and <code>printf</code> to output
+            their sum:</p>
+        <div class="math">
+            <pre><code>
+    #include &lt;stdio.h&gt;
+
+    int main() {
+        int num1, num2, sum;
+
+        // Input two integers
+        printf("Enter two integers: ");
+        scanf("%d %d", &num1, &num2);
+
+        // Compute the sum
+        sum = num1 + num2;
+
+        // Output the result
+        printf("The sum of %d and %d is %d\n", num1, num2, sum);
+
+        return 0;
+    }
+    </code></pre>
+        </div>
+
+        <p>In this program, <code>scanf</code> reads two integers and stores them in <code>num1</code> and
+            <code>num2</code>.
+            The sum is then computed and stored in <code>sum</code>. Finally, <code>printf</code> outputs the result
+            using format
+            specifiers <code>%d</code> to print the values of <code>num1</code>, <code>num2</code>, and
+            <code>sum</code>.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>In this section, we've learned how to use the <code>scanf</code> and <code>printf</code> functions for
+            formatted input
+            and output in C. These two functions are essential for reading user input and displaying output, and you'll
+            continue to
+            use them as you explore more C programs.</p>
+    </div>
+
+
+    
+
+
+
+    <!-- Footer 
+    <footer class="footer">
+        <p>&copy; 2024 Advanced Note Uploader. All rights reserved.</p>
+    </footer>
+    -->
+
+</body>
+
+</html>

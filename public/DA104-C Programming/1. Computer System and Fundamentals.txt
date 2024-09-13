@@ -1,0 +1,199 @@
+## Computer System and Fundamentals
+
+### Computer System
+user --> Application Software --> Operating System --> Hardware
+(e.g., MS Word) (e.g., Windows) (e.g., Desktop)
+
+
+### Hardware
+- Monitor
+- Central Processing Unit (CPU)
+- Keyboard
+- Mouse
+- Speakers
+
+
+### Inside the System Unit
+All computers are more or less based on the same basic design—Von Neumann Architecture.
+
+
+### System Unit Components
+- Power Supply (SMPS) — Switch Mode Power Supply, converts AC to DC.
+- CPU — Central Processing Unit, handles arithmetic logic operations and controls hardware.
+- RAM — Random Access Memory, volatile memory that loses data when powered off. Data is saved to secondary memory.
+
+
+### Memory
+- Stores data and programs but is volatile, meaning it only stores data when the power is on.
+- Saved data is stored in secondary memory (e.g., hard drive, SSD).
+
+
+### Control Unit
+- Executes programs.
+
+
+### ALU (Arithmetic Logic Unit)
+- Performs arithmetic and logic operations as requested by the program.
+
+
+### Input and Output
+- Handles devices like the screen, keyboard, and storage devices.
+
+
+### Bus
+- A communication channel that connects the system components.
+
+
+### Random Access Memory (RAM)
+- Typical memory sizes: KB, MB, GB, TB.
+- Example: Modern computers often have 8GB or 16GB of RAM.
+
+
+### Operating System (OS)
+- The OS is system software that acts as a layer between application software and hardware.
+- Four components of a computer system: user --> application --> OS --> hardware
+
+
+### OS Functions
+- Provides abstraction for applications, managing hardware details (e.g., managing data transfer from RAM to SSD).
+- Efficiently uses computer hardware.
+- Provides security and protection for applications and hardware.
+
+
+### Application Software
+- Software used by the user for specific tasks (e.g., MS Word, Photoshop).
+
+
+### Machine Language
+- Also known as machine code, it is the lowest level programming language that a computer can understand.
+- Made up of binary (0s and 1s), which is difficult for humans to understand and write.
+
+
+### High-Level Language (HLL)
+- To simplify programming, HLLs like C, C++, Python, and Java were created.
+- These languages are easier to learn and understand but require a compiler to translate them into machine language.
+
+
+### Algorithms and Flowcharts
+- Steps to solve a task or problem.
+
+
+### Problem Solving Phase
+- Produces an ordered sequence of steps that describe the solution to a problem.
+- This sequence of steps is called an Algorithm.
+- Graphical representation of an algorithm is a Flowchart.
+
+
+### Implementation Phase
+- The process of implementing the program using a programming language.
+
+
+### Example
+- Task: Find the largest of two values.
+  Input val1, val2
+  if (val1 > val2) then 
+  max = val1
+  else
+  max = val2
+  end if
+  print "Largest value is", max
+
+
+### Common Flowchart Symbols
+- Parallelogram: Input and Output
+- Diamond: Comparison
+- Rectangle: Processing
+
+
+## Linux Primer-1
+
+### History
+- Released on Sep 17, 1991, by Linus Torvalds, it is a free and open-source operating system.
+- Richard Stallman contributed GNU utilities like free programs.
+
+
+### What is Linux?
+- A Unix-based multitasking, multi-user OS developed in 1969.
+
+
+### Connecting to Linux
+- Terminal (text mode).
+- Remotely using:
+  - Text mode: SSH.
+  - Graphical mode: Windows environment.
+
+
+### Shell
+- After logging in to Linux, it starts a shell, which communicates with the internal part of the OS called the kernel.
+- Popular shells include Korn, tcsh, csh, and bash.
+- Differences between shells are subtle.
+- Linux is case-sensitive.
+
+
+## Linux Primer-2
+
+### Users and File Structure
+- Two types of users: superuser (root) and normal user.
+- Linux Directory Structure:
+  - /boot
+  - /usr
+  - /bin
+  - /sbin
+  - /etc
+  - /lib
+  - /var
+  - /tmp
+  - /home
+  - /dev
+  - /proc
+
+
+### Useful Linux Commands
+- `ls` — List all files.
+  - `ls -l` — Long listing format.
+  - `ls -t` — Sort by time.
+  - `ls -S` — Sort by size.
+  - `ls -h` — Human-readable file sizes.
+  - `ls -r` — Reverse order.
+  
+- `cat` — View file content.
+- `less`, `head`, `tail` — Other file viewing options.
+- `which <filename>` — Give the path to a file.
+- `locate <filename>` — Find a file location.
+- `tar` — Archiving tool.
+- `gzip` — Compress files.
+- `touch` — Create an empty file or update the timestamp of an existing file.
+
+
+- `file <name>` — Display the file type.
+- `pwd` — Print the current working directory.
+- `rm <name>` — Remove a file.
+- `mv <src> <dst>` — Move or rename a file.
+- `cp <src> <dst>` — Copy a file.
+- `ps` — Show running processes.
+
+
+### File Manipulation and Permissions
+- Example: `drwxr-xr-x 1 user group 512 Sep 4 12:28 file-name`
+  - First set (rwx): User permissions (read, write, execute).
+  - Second set (r-x): Group permissions (read, execute).
+  - Third set (r-x): Others' permissions (read, execute).
+
+
+- Changing Permissions:
+  - `chmod ??? <filename>` — Change file permissions.
+    Example: `chmod 755 file-name`
+  
+
+- Changing Group and Owner:
+  - `chgrp new-group <filename>` — Change group.
+  - `chown new-owner <filename>` — Change owner.
+
+
+### Text Editors
+- `gedit` — A simple GUI text editor.
+- `vi` — A powerful command-line editor.
+
+
+### Piping
+- `ls | wc -l` — Redirect the output of `ls` as input to `wc -l` (pipe commands together).
