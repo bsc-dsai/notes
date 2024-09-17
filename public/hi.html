@@ -1,0 +1,557 @@
+<html>
+
+<body>
+    <pre>
+        **DA102 --- Lesson!=1
+        About Data 
+            def- collection of info facts values
+            the data is used as basis for computation analysis and desicion making
+            numbers, text, image element, audio or video
+            data is raw material that is processed organised interpreted to extract meaning and generate insights
+            data is a fundamental concept imporatnt for in various feilds science buisness and reaserch
+            data is considered as a key in this digital age
+        
+            ex- facebook post text describing about a post having images and is about a particular event 
+                type of data - text no of likes image  names no of comments by users etc
+            ex- data published in a news article 
+                type of data - text (author, facts, day, where it is published), associarted image elemets
+            ex- youtube
+                type - videos, (tumbnails, text associalte with video, lenthof video, creator, video related to a particular topic etc)
+            ex- live processed data (train app, stock market data)
+                type - live data periodically updated
+        
+        
+        **Data 01
+            Numbers- ex- qunatity=10, price=200
+            qualitative data- {"Un-married","married", "Divorced"}, {"Students", "Faculty"}  has discrete values [Has No Relation between elemets]
+            qunatitaive data- {1=poor, 2= fair, 3=good, 4=verry good, 5= excellent} has discrete values but are associarted with something
+            bolean valuse {true, false}
+            temproral data- date, time, time stamp
+            textual data- sequences of characters like words, sentences 
+            mixed data- combination of all above data
+            audio data- songs
+            image data- screenshort, image captured using camera
+            video data- combination of different img and audio data
+        
+        data can be stored   in spreadsheets, notepad, as an post as article etc
+        
+        
+        Real valued data
+            Analysis ex01
+                to byu a book The linux programming interface by michale kerrisk from web
+                to byu the book from store which offeres best price 
+                now collect data from ecomerce website
+                        1. amazon=5594.07
+                        2. flipkart=5599
+                        3. books.redif=5378
+                        4. bookswagon=7738
+                        5. sanpdeal=not available
+        
+        qualitative data
+            Analysis ex03
+                youtub-video-- how many viewers disliked or liked the video-----more likes of video has strong correlationn to increase in revenue
+        
+        text data
+            analysis ex04
+                amazon--product--book--product review--this info is available in form of text---this data help to know the performance of product like if they have liked it or not
+        
+        
+        
+        
+        **issues in collecting data
+        
+            bias and sampling issues
+        
+                sampling bias--- when sample collected does not  represent the entire population 
+                    ex- in the collection of price of book above we have visited only few webpages not the whole internet
+                selection bais--- when the participants are not selected randomly leading to inaccrate results 
+                    ex- like me when i was searching for the price one website just appeared in mind even before searching the web amazon
+                nonresponse bais--- when a signifiacnt portion of the selected participants does not respond, 
+                    ex- like in the above example i was searching a technical book about programming thus if i vist a stoty book site it will not provide the book i want, thus it prmotes a non response bias as, the site is about books among the population of sites but the book i want is not availabe in that category of book stores
+        
+            measurment issues
+        
+                measurment error--- inaccuracies or inconsistent in measurement instruments leading to incorrect or imprecise data
+        
+                subjective measurements---when data is collected through subjective method like surveys, for ex an indiviual can respond based on the personal thoughts etc
+        
+                social desirability bias---participants will provide responses they belive are socially acceptable than their own opinions
+        
+            data quality and integrity issues
+        
+                data integrity issues
+                missing values
+                a data record that is not complete 
+                data entry error
+                duplication in data
+        
+            ethical and privacy concerns
+                informed consent
+                privacy protection---protecting participants identity
+                anonymity
+        
+            technological challenges
+                data security
+                data storage
+                technical glitches
+        
+            cultural and language related challenges
+                cltural bias
+                translation isssues
+        
+            resource limitaion
+                financial limitaion--- funding for tools etc
+                time constraints--- rushed data may result into error and incomplete data
+        
+        
+        **Types analytics
+        analytics componets
+            1.buisness context why we want to analyse data
+                ex-- to pridict if coustomer is willing to buy a particular product based on their interest 
+                
+                ex-- in a particular service if a coustomer leave the service we can pridict way before of 
+                    time to ask the coustomer to address the core concern to retain such more customers
+         
+        
+        1. descriptive analytics
+            -focus on summarizing and interpreting the historical data 
+            -it give a insight into past trends
+            -provide a clear and concise representation of data in order to understand the data and help in
+             good decision making
+             
+             main theme is to summarize the large data into managable and interpretable forms, and identify the patterns and trends present in historical data 
+        
+        
+        2. predictive analytics
+            -focus is on finding the future trend given historical data and current data
+            -the goal is to build a model that can learn historical data, use it to make prediction about      
+             future data
+        
+             ex- customer churn---customer is leaving the service
+        
+        
+        **data analytics tools
+            microsoft excel
+            tableau
+            power 
+            biasqlikView
+            R programming language and software envoirnment for statisticak computing and graphics
+            python
+            SAS
+            SPSS
+            MATLAB
+            stata
+            JPM
+        
+        **lesson2
+        **cell in excel
+            A fundamental unit in excel
+            it has location in excel in  A1, B2---Alphabet are coloum no.. and numbers are row no...
+            a cell can hold various data type like num, string, real valued numbers, dates etc
+            they can be used to  perform desired computation
+            cells can be formatted
+        
+        **data in a cell 
+            a cell can hold many data types like
+                numbers and real valued data
+                text
+                date and time
+                formula
+                functions
+                hyperlinks
+                images and objects
+                notes and comments 
+                validation rules
+                symbols and special characters
+                rich text formatting
+        
+            
+        
+        **referring to group of  contiguous cells
+            -row selection notation (ex--C1:C7    C1,C2,C3,C4,C5,C6 AND C7)
+            -column notation (ex--A1:F1   A1,B1,C1,D1,E1, AND F1)
+            -row and column notation (ex--A1:C3   A1,A2,A3,B1,B2,B3,C1,C2,C3)
+                
+            
+            
+        **5 elements of excel
+        
+            Formulas
+            Functions
+            Logical functions
+            References
+            Errors
+        
+        **Formulas
+                specify the computatios to be performed,
+                an expression involving constants or cells or their combination,  
+                outputs: result of the computation stored in a separate cell
+                    a formula start with equal to = 
+        
+        **copying formula to same column but varying row
+        
+        **copying formula to same row but varying column
+        
+        **formula as matrix operation
+        
+        **functions
+            pre built formula which performs already identified computation
+            it takes one or more inputs or known as arguments
+        
+                example
+                    mathematicals functions 
+                    text function
+                    Logical function
+                    date and time functions
+                    financial functions
+                    statistical function'
+                    lookup and Reference function
+                    array function
+        
+                SUM function     
+                    =SUM(A1,B2.....)
+                    =SUM(1,2,3,4,55,6,7...)
+                    =SUM(A2:G6,D3:F4.....)
+                    =SUM(1,2,A2:G6)
+        
+                AVERAGE function
+                    =AVERAGE(1,2,3,4,5,6......)
+                    =AVERAGE(A1,B2.....)
+                    =AVERAGE(A2:G6,D3:F4.....)
+                    =AVERAGE(1,2,A2:G6)
+        
+                SUM PRODDUCT function
+                    =SUMPRODUCT()
+        
+                VALUE function
+                    =VALUE(A1)
+        
+        **Logical function
+            IF function
+                has three arguments 
+                    1st argument comparison involving two values or cell (it is also know as testing conndition)
+                    2nd argument is the result of fun when comparison is true
+                    3rd argument is the result of fun when comparison is false
+            
+            example   
+                =IF(G2>20, "Good work", "Student Need To Improve")
+                =IF(G2>=<20, "Good work", "Student Need To Improve")
+        
+            AND function
+                returns true only if all argument are true
+                    =AND(True, True...,False.....)-----False
+                    =AND(True, True)----True
+                    =AND(1=1,2=2)----true
+                    =AND(1=1, 3=2)----False
+        
+        **function call within function call
+            =IF(AND(.....), "...", "...")
+        
+            OR function
+                returns true if any one of the arguments are True
+                returns false only if all argument are false
+        
+                    =OR(1=2, 2=3, 4=5)-----false
+                    =OR(1=1,2=2,3=3,4=100)-----True
+        
+        **Reference function
+            these allow us to work with 
+                cell References,
+                cell ranges
+                addresses
+        
+            these class of function are used to extract info about
+                cell and ranges 
+                manipulate cell References
+                perform computation based on the location of the cell
+        
+            example
+                OFFSET
+                INDIRECTS
+                INDEX
+                MATCH
+        
+        **Errors
+            #DIV/0!---divison by zero
+            #VALUE!
+            #NAME?
+            #NUM
+            #REF!
+            
+            
+        Descriptive Analysis Example 1
+            Employees weekly wages
+            
+            the file contains 4 columns
+                names
+                nof of hour worked
+                wages per hour to be paid
+        
+            to compute
+                weekly salary to be paid to each
+                total weekly salary paid
+                average salary paid
+        
+            this the example of descriptive analytics
+        
+        Descriptive Analysis Example 2  
+            
+        ####Absolute Addressing
+        
+            Fixed Row, Varying Column and Effect of Copy
+        
+            ● Cell is referred as (Column Name, Row Number).
+            
+            ● In order for copy not to change row number, place DOLLAR sign in front of row.
+            
+            ● Example: Cell B1 contains the formula A$10
+            
+            ● When formula in cell B1 is copied to cell C1,
+                ○ As there is NO DOLLAR sign in column name, it is varied to B.
+                ○ As there is DOLLAR sign in row 10, the row number 10 remains constant.
+                ○ There the formula produced in cell C1 is: B10
+        
+            Fixed Row, Varying Column and Effect of Copy
+        
+            ● Cell is referred as (Column Name, Row Number).
+            
+            ● In order for copy not to change column name, place DOLLAR sign in front column name.
+            
+            ● Example: Cell B1 contains the formula $A10
+            
+            ● When formula in cell B1 is copied to cell B2,
+                ○ As there is DOLLAR sign in column name, column name is NOT varied. It is A
+                ○ As there is NO DOLLAR sign in row 10, the row number changes to11.
+                ○ There the formula produced in cell B1 is: A11
+        
+            Absolute Addressing – fixed row, fixed column
+        
+            ● Cell is referred as (Column Name, Row Number).
+            
+            ● In order for copy not to change column name, place DOLLAR sign in front column name.
+            
+            ● In order for copy not to change row number, place DOLLAR sign in front row number
+            
+            ● Example: Cell B1 contains the formula $A$10
+            
+            ● When formula in cell B1 is copied to cell D2,
+                ○ As there is DOLLAR sign in column name, column name is NOT varied. It remains A.
+                ○ As there is DOLLAR sign in row 10, the row number NOT varied. It remains 10.
+                ○ There the formula produced in cell D2 is: A10
+        
+        
+        ####Example Predicting The Number of Customers
+            Predicting The Number of Customers At 10th Year
+        
+            ● Given inputs
+                ○ Number of customers at the beginning of year 1 = 100
+                ○ Number of customers acquired over the year = 20
+                ○ Percentage of customers who leave the services = 15%
+            
+            ● Problem is to compute the number of customers at the end of year 10.
+            
+            ● Solution approach is to compute the following four quantities
+                ○ Number of customers at the beginning of each year
+                ○ New customers joined in that year
+                ○ Estimated number of customers who quit the services
+                ○ Customers at the end of that year
+        
+        
+        ####Coffee Demand Curve Estimation
+        
+            
+            ● Given inputs
+                ○ Coffee Demand (in number of cups) = (100 – 15 * price)
+                ○ Profit = (Price of cup – Original unit cost) * Coffee Demand
+            
+            ● Estimate the profit when
+            
+            ● The original unit cost varies from $0.5 to $2.0 and
+                ○ Price of one coffee cup is sold is varied from $2.0 to $5.0.
+            
+            ● Solution approach is to compute the following four quantities
+                ○ Number of customers at the beginning of each year
+                ○ New customers joined in that year
+                ○ Estimated number of customers who quit the services
+                ○ Customers at the end of that year
+        
+        ####Naming Group of Cells – Range Name
+            name range referencing
+        
+            name box in excel
+        
+        ####Referring Cells Using VLOOKUP
+            
+            ● Individual Cells are referred using (column name, row number) format
+            
+            ● One must know the column name AND row number to access a cell.
+            
+            ● Many a times we know a value and we want to access cells based on the known value.
+        
+        
+            Roll numbers are stored in column A
+            
+            ● Names are stored in column B
+            
+            ● CPI information is stored in column C
+            
+            ● Given a roll number (say 124), access corresponding CPI of the student.
+            
+            ● CPI is not accessed using C3 however with the known value of roll number.
+            
+            ● Cell value to be accessed is present in C3.
+                A               B             C
+                1 RollNumber    Name          CPI
+                2 123           Alok Kumar    7.2
+                3 124           Anmol         8.4
+                4 125           Amar Nath     9.6
+        
+            In each of these examples, given a value, retrieve information that we are seeking.
+                
+                ● VLOOKUP help achieve this task
+                
+                ● VLOOKUP is a function.
+                
+                ● It takes FOUR arguments
+                
+                ● Returns the value that is being associated with the search value.
+                    ○ Value that is being searched
+                        ■ Example: 124 (roll number)
+                    ○ The range of cells in which the value is being searched
+                        ■ A2:C4 (3 cells in column A, Column B and Column C). One of the columns must correspond to roll numbers
+                    ○ Column index from which the search value is being obtained. In this example, column index is 3
+                    ○ Range look up: TRUE or FALSE.
+        
+        
+            ● Lookup Value that is being searched – example roll number 124
+            
+            ● The range of cells in which the value is being searched
+                ○ A2:C4 (4 cells in columns A, B and C). One of the columns must correspond to roll numbers
+            
+            ● Column index from which the search value is being obtained
+            
+            ● Optional: TRUE OR FALSE
+                ○ For an exact match – FALSE
+                ○ For an approximate match - TRUE. 
+        
+                A               B             C
+                1 RollNumber    Name          CPI
+                2 123           Alok Kumar    7.2
+                3 124           Anmol         8.4
+                4 125           Amar Nath     9.6
+                5 126           GOD ITACHI   10.7
+        
+        
+                VLOOKUP(A3, A2:C4, 3, FALSE)
+        
+        
+        
+            ● We look at examples involving approximate match.
+        
+            ● When the value being searched is not present in the first column of the table, then Excel bases the lookup on the largest value in the first column that is less than the lookup value
+        
+            ● VLOOKUP searches for values in the righthand direction
+        
+            ● Lefthanded search cannot be performed using VLOOKUP alone
+        
+            ● When duplicate values are present, VLOOKUP will find the first match
+        
+            ● If First column is unsorted then perform exact search(False)
+                VLOOKUP(,,,False)
+        
+        #### Referring Cells Using HLOOKUP
+            HLOOKUP look up for values in rows.
+            It takes FOUR arguments
+            Returns the value that is being associated with the search value.
+        
+            row index
+        
+            =HLOOKUP(B8, $B$2:$D$3, 2, TRUE)
+        
+        #### Referring Cells Using XLOOKUP
+            XLOOKUP work with both column data (as in VLOOKUP), row data (as in HLOOKUP)
+        
+            Can lookup both righthand direction and lefthand direction
+        
+            Can return more than one value
+        
+            Can perform reverse search
+        
+          XLOOKUP arguments
+            ● Lookup value – a cell OR a group of cells
+            ● Lookup array – the range of cells within which search should be performed
+            ● Return array – Column/row from where values to be returned
+            ● Not found – Value to return if no match is found
+            ● Match mode - {Exact, Exact or Next smallest, Exact or Next Largest, …}
+            ● Search mode – search from {first, last, …}  
+        
+            =XLOOKUP(Lookup Value, Lookup array, Return array, Not found Message, Match mode, Search mode)
+            
+            =XLOOKUP(J2, J2:J6, O2:O6, 0, 1)
+                        
+            Match mode	0	Exact match
+            Match mode	-1	Exact match or next smaller
+            Match mode	1	Exact match or next larger
+        
+        
+        #### Referring Cells Using INDEX
+        
+            ● Group of cells are referred using colon notation
+            ● A1:C3 refers to cells A1, A2, A3, B1, B2, B3, C1, C2 and C3
+            ● Index function allows to us to think group of cells A1:C3 as if they are a two-dimensional array (or a matrix).
+            ● Access the elements using row number and column number notation
+                  A(1) B(2)  C(3)
+                1  A1   B1    C1
+                2  A2   B2    C2
+                3  A3   B3    C3
+                    B2 is accessed as: INDEX(A1:C3, 2, 2)
+                    C2 is accessed as: INDEX(A1:C3, 2, 3)
+        
+        
+        #### MATCH Function
+        
+        
+            ● Column A has list of roll numbers.
+            ● Given a specific roll number 1234, find in which row this value is appearing in column A?
+            ● In this example, this roll number is appearing in second row.
+            ● This example shows an exact match of MATCH
+                            
+                            (A)Roll Number
+                        1   1233
+                        2   1234
+                        3   1235
+                        4   1236
+        
+            0 exact match
+            1 approximate match
+        
+            =MATCH(A2, A2:C6, 0)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </pre>
+</body>
+
+</html>
